@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<REPOSITORY
+   COMMENTS="Siebel Repository_June_release_2019"
+   NAME="Siebel Repository"
+   UPDATED="06/13/2019 03:14:20"
+   UPDATED_BY="SADMIN"
+   CREATED="06/13/2019 00:00:02"
+   CREATED_BY="SADMIN"
+   FIO_PLACEHOLDER_FIO="TRUE">
+	<PROJECT
+	   ALLOW_OBJECT_LOCKING="Y"
+	   COMMENTS="KDHIMAN: 03-JULY-19: Created for ECI Project"
+	   INACTIVE="N"
+	   LOCKED="N"
+	   NAME="SC ECI"
+	   UI_FREEZE="N"
+	   UPDATED="10/09/2019 07:20:23"
+	   UPDATED_BY="KTODETI"
+	   CREATED="07/30/2019 10:02:17"
+	   CREATED_BY="VALLA"
+	   FIO_PLACEHOLDER_FIO="TRUE">
+		<BUSINESS_SERVICE
+		   CACHE="N"
+		   CLASS="CSSService"
+		   EXTERNAL_USE="N"
+		   HIDDEN="N"
+		   INACTIVE="N"
+		   NAME="SNECIContactUpdate"
+		   OBJECT_LANGUAGE_LOCKED="ENU"
+		   OBJECT_LOCKED="Y"
+		   OBJECT_LOCKED_DATE="10/09/2019 11:27:44"
+		   SERVER_ENABLED="N"
+		   STATE_MANAGEMENT_TYPE="Stateful"
+		   WEB_SERVICE_ENABLED="N"
+		   OBJECT_LOCKED_BY_NAME="KTODETI"
+		   UPDATED="10/09/2019 11:27:44"
+		   UPDATED_BY="KTODETI"
+		   CREATED="07/30/2019 10:05:32"
+		   CREATED_BY="VALLA">
+			<BUSINESS_SERVICE_LOCALE
+			   APPLICATION_CODE="STD"
+			   DISPLAY_NAME="SN ECI Contact Update"
+			   INACTIVE="N"
+			   LANGUAGE_CODE="ENU"
+			   NAME="ENU-STD"
+			   TRANSLATE="Y"
+			   UPDATED="07/30/2019 10:06:32"
+			   UPDATED_BY="VALLA"
+			   CREATED="07/30/2019 10:06:32"
+			   CREATED_BY="VALLA">
+			</BUSINESS_SERVICE_LOCALE>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="ContactUpdate"
+			   UPDATED="07/30/2019 10:07:12"
+			   UPDATED_BY="VALLA"
+			   CREATED="07/30/2019 10:06:52"
+			   CREATED_BY="VALLA">
+				<BUSINESS_SERVICE_METHOD_LOCALE
+				   APPLICATION_CODE="STD"
+				   DISPLAY_NAME="Contact Update"
+				   INACTIVE="N"
+				   LANGUAGE_CODE="ENU"
+				   NAME="ENU-STD"
+				   TRANSLATE="Y"
+				   UPDATED="07/30/2019 10:07:12"
+				   UPDATED_BY="VALLA"
+				   CREATED="07/30/2019 10:07:12"
+				   CREATED_BY="VALLA">
+				</BUSINESS_SERVICE_METHOD_LOCALE>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="(declarations)"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="//Your public declarations go here...  
+"
+			   SEQUENCE="1"
+			   UPDATED="08/08/2019 01:26:49"
+			   UPDATED_BY="SPATIBAN"
+			   CREATED="08/08/2019 01:26:49"
+			   CREATED_BY="SPATIBAN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="Service_PreInvokeMethod"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function Service_PreInvokeMethod (MethodName, Inputs, Outputs)
+{
+/*************************************************************************************/
+// Purpose:	To read the SQS message and update or create the contact for ECI Project
+//			
+// Input:	Inputs- SQS JSON Message
+// Output:	Status
+// Author:	 Srinivas Yeruva ICX
+// Date:  30-JULY-2019  	
+/*************************************************************************************/
+	if(MethodName == &quot;ContactUpdate&quot;){
+		parseInputDetails(Inputs, Outputs);
+		return (CancelOperation);
+	}
+	return (ContinueOperation);
+}"
+			   SEQUENCE="6"
+			   UPDATED="08/22/2019 05:10:56"
+			   UPDATED_BY="SNARRA"
+			   CREATED="07/30/2019 10:13:14"
+			   CREATED_BY="VALLA">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="activateFields"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function activateFields(oBC){
+	with(oBC){
+		ActivateField(&quot;Id&quot;);
+		ActivateField(&quot;First Name&quot;);
+		ActivateField(&quot;Last Name&quot;);
+		ActivateField(&quot;Email Address&quot;);
+		ActivateField(&quot;Email Address 2&quot;)
+		ActivateField(&quot;SC Cognito Id&quot;);
+		ActivateField(&quot;SC Primary Slpr Customer Number&quot;);
+		ActivateField(&quot;SC SIQ Order Number&quot;);
+		ActivateField(&quot;Type&quot;);
+	}
+}"
+			   SEQUENCE="2"
+			   UPDATED="08/08/2019 01:26:49"
+			   UPDATED_BY="SPATIBAN"
+			   CREATED="07/31/2019 07:05:04"
+			   CREATED_BY="VALLA">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="contactUpdate"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function contactUpdate(oBC, Inputs, Outputs) {
+
+    //var sCognitoId = Inputs.GetChild(0).GetChild(0).GetProperty(&quot;Value&quot;);
+   // var sPrimarySlprCustomerNumber = Inputs.GetChild(0).GetChild(1).GetProperty(&quot;Value&quot;);
+    //var sSIQOrderNumber = Inputs.GetChild(0).GetChild(2).GetProperty(&quot;Value&quot;);
+   // var sEmail = Inputs.GetChild(0).GetChild(4).GetProperty(&quot;Value&quot;);
+    var  isRecordExists=&quot;&quot;;
+	var sCognitoId=&apos;&apos;,sSIQUserType=&apos;&apos;,sPrimarySlprCustomerNumber=&apos;&apos;,sSIQOrderNumber=&apos;&apos;,sEmail=&apos;&apos;;
+    for(var i = 0; i &lt; Inputs.GetChild(0).GetChildCount();i++) {
+			if(Inputs.GetChild(0).GetChild(i).GetType() == &quot;sub&quot;) {
+					sCognitoId = Inputs.GetChild(0).GetChild(i).GetProperty(&quot;Value&quot;);
+			}
+			else if(Inputs.GetChild(0).GetChild(i).GetType() == &quot;customer_number&quot;) {
+					sPrimarySlprCustomerNumber = Inputs.GetChild(0).GetChild(i).GetProperty(&quot;Value&quot;);
+			}
+			else if(Inputs.GetChild(0).GetChild(i).GetType() == &quot;order_id&quot;) {
+					sSIQOrderNumber = Inputs.GetChild(0).GetChild(i).GetProperty(&quot;Value&quot;);
+			}
+			else if(Inputs.GetChild(0).GetChild(i).GetType() == &quot;email&quot;) {
+					sEmail = Inputs.GetChild(0).GetChild(i).GetProperty(&quot;Value&quot;);
+			}
+			else if(Inputs.GetChild(0).GetChild(i).GetType() == &quot;siq_user_type&quot;) {
+					sSIQUserType = Inputs.GetChild(0).GetChild(i).GetProperty(&quot;Value&quot;);
+			}
+		}
+		if (sSIQUserType != &quot;&quot; &amp;&amp; sSIQUserType != null &amp;&amp; typeof sSIQUserType != &quot;undefined&quot;)
+		sSIQUserType=sSIQUserType.toUpperCase();
+    with(oBC) {
+		isRecordExists = FirstRecord();
+		while(isRecordExists){
+			if (sCognitoId != &quot;&quot; &amp;&amp; sCognitoId != null &amp;&amp; typeof sCognitoId != &quot;undefined&quot;) {
+	            SetFieldValue(&quot;SC Cognito Id&quot;, sCognitoId);
+	        }
+	        if (sPrimarySlprCustomerNumber != &quot;&quot; &amp;&amp; sPrimarySlprCustomerNumber != null &amp;&amp; typeof sPrimarySlprCustomerNumber != &quot;undefined&quot;) {
+	            SetFieldValue(&quot;SC Primary Slpr Customer Number&quot;, sPrimarySlprCustomerNumber);
+	        }
+	        if (sSIQOrderNumber != &quot;&quot; &amp;&amp; sSIQOrderNumber != null &amp;&amp; typeof sSIQOrderNumber != &quot;undefined&quot;) {
+	            SetFieldValue(&quot;SC SIQ Order Number&quot;, sSIQOrderNumber);
+	        }
+	        if (sEmail != &quot;&quot; &amp;&amp; sEmail != null &amp;&amp; typeof sEmail != &quot;undefined&quot;) {
+	            SetFieldValue(&quot;Email Address 2&quot;, sEmail);
+	        }
+	        WriteRecord();
+			isRecordExists=NextRecord();
+		}
+	}
+}"
+			   SEQUENCE="3"
+			   UPDATED="09/23/2019 10:53:21"
+			   UPDATED_BY="VALLA"
+			   CREATED="07/30/2019 23:09:06"
+			   CREATED_BY="VALLA">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="createContact"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function createContact(Inputs, Outputs) {
+    var oConBO = TheApplication().GetBusObject(&quot;Contact&quot;);
+    var oconBC = oConBO.GetBusComp(&quot;Contact&quot;);
+   // var sCognitoId = Inputs.GetChild(0).GetChild(0).GetProperty(&quot;Value&quot;);
+   // var sPrimarySlprCustomerNumber = Inputs.GetChild(0).GetChild(1).GetProperty(&quot;Value&quot;);
+    //var sSIQOrderNumber = Inputs.GetChild(0).GetChild(2).GetProperty(&quot;Value&quot;);
+    // var sFirstName = Inputs.GetChild(0).GetChild(5).GetProperty(&quot;FirstName&quot;);
+    // var slastName = Inputs.GetChild(0).GetChild(6).GetProperty(&quot;LastName&quot;);
+    var sFirstName = &quot;&quot;;
+    var slastName = &quot;&quot;;
+	var sCognitoId=&apos;&apos;,sPrimarySlprCustomerNumber=&apos;&apos;,sSIQUserType=&apos;&apos;,sSIQOrderNumber=&apos;&apos;,sEmailAddress=&apos;&apos;;
+    //var sEmailAddress = Inputs.GetChild(0).GetChild(4).GetProperty(&quot;Value&quot;);
+    var sCustType = TheApplication().InvokeMethod(&quot;LookupValue&quot;, &quot;CONTACT_TYPE&quot;, &quot;SIQ - SLEEPER&quot;);
+	for(var i = 0; i &lt; Inputs.GetChild(0).GetChildCount();i++) {
+			if(Inputs.GetChild(0).GetChild(i).GetType() == &quot;sub&quot;) {
+					sCognitoId = Inputs.GetChild(0).GetChild(i).GetProperty(&quot;Value&quot;);
+			}
+			else if(Inputs.GetChild(0).GetChild(i).GetType() == &quot;customer_number&quot;) {
+					sPrimarySlprCustomerNumber = Inputs.GetChild(0).GetChild(i).GetProperty(&quot;Value&quot;);
+			}
+			else if(Inputs.GetChild(0).GetChild(i).GetType() == &quot;order_id&quot;) {
+					sSIQOrderNumber = Inputs.GetChild(0).GetChild(i).GetProperty(&quot;Value&quot;);
+			}
+			else if(Inputs.GetChild(0).GetChild(i).GetType() == &quot;email&quot;) {
+					sEmailAddress = Inputs.GetChild(0).GetChild(i).GetProperty(&quot;Value&quot;);
+			}
+			else if(Inputs.GetChild(0).GetChild(i).GetType() == &quot;siq_user_type&quot;) {
+					sSIQUserType = Inputs.GetChild(0).GetChild(i).GetProperty(&quot;Value&quot;);
+			}
+		}
+		if (sSIQUserType != &quot;&quot; &amp;&amp; sSIQUserType != null &amp;&amp; typeof sSIQUserType != &quot;undefined&quot;)
+		sSIQUserType=sSIQUserType.toUpperCase();
+    with(oconBC) {
+
+        NewRecord(NewAfter);
+        if (sFirstName != &quot;&quot; &amp;&amp; sFirstName != null &amp;&amp; typeof sFirstName != &quot;undefined&quot;) {
+            SetFieldValue(&quot;First Name&quot;, sFirstName);
+        } else
+            SetFieldValue(&quot;First Name&quot;, &quot;SIQ&quot;);
+        if (slastName != &quot;&quot; &amp;&amp; slastName != null &amp;&amp; typeof slastName != &quot;undefined&quot;) {
+            SetFieldValue(&quot;Last Name&quot;, slastName);
+        } else
+            SetFieldValue(&quot;Last Name&quot;, &quot;SLEEPER&quot;);
+        if (sEmailAddress != &quot;&quot; &amp;&amp; sEmailAddress != null &amp;&amp; typeof sEmailAddress != &quot;undefined&quot;) {
+            SetFieldValue(&quot;Email Address 2&quot;, sEmailAddress);
+        }
+        if (sCognitoId != &quot;&quot; &amp;&amp; sCognitoId != null &amp;&amp; typeof sCognitoId != &quot;undefined&quot;) {
+            SetFieldValue(&quot;SC Cognito Id&quot;, sCognitoId);
+        }
+        if (sPrimarySlprCustomerNumber != &quot;&quot; &amp;&amp; sPrimarySlprCustomerNumber != null &amp;&amp; typeof sPrimarySlprCustomerNumber != &quot;undefined&quot;) {
+            SetFieldValue(&quot;SC Primary Slpr Customer Number&quot;, sPrimarySlprCustomerNumber);
+        }
+        if (sSIQOrderNumber != &quot;&quot; &amp;&amp; sSIQOrderNumber != null &amp;&amp; typeof sSIQOrderNumber != &quot;undefined&quot;) {
+            SetFieldValue(&quot;SC SIQ Order Number&quot;, sSIQOrderNumber);
+        }
+        SetFieldValue(&quot;Type&quot;, sCustType);
+
+        WriteRecord();
+    }
+}"
+			   SEQUENCE="4"
+			   UPDATED="09/23/2019 10:53:46"
+			   UPDATED_BY="VALLA"
+			   CREATED="07/31/2019 01:22:27"
+			   CREATED_BY="VALLA">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="parseInputDetails"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function parseInputDetails(Inputs, Outputs) {
+    try {
+        var oBO = TheApplication().GetBusObject(&quot;Contact&quot;);
+        var oBC = oBO.GetBusComp(&quot;SN Contact Thin ECI&quot;);
+		var oOrderBO = TheApplication().GetBusObject(&quot;Order Entry&quot;);
+		var oOrderBC = oOrderBO.GetBusComp(&quot;Order Entry - Orders&quot;);
+        /*var sCognitoId = Inputs.GetChild(0).GetChild(0).GetProperty(&quot;Value&quot;);
+        var sEmail = Inputs.GetChild(0).GetChild(4).GetProperty(&quot;Value&quot;);
+        var sSIQOrderNumber = Inputs.GetChild(0).GetChild(2).GetProperty(&quot;Value&quot;);
+        var sSIQUserType = Inputs.GetChild(0).GetChild(3).GetProperty(&quot;Value&quot;);
+        var sCustomerNumber = Inputs.GetChild(0).GetChild(1).GetProperty(&quot;Value&quot;);*/
+		var sCognitoId=&apos;&apos;,sSIQUserType=&apos;&apos;,sCustomerNumber=&apos;&apos;,sSIQOrderNumber=&apos;&apos;,sEmail=&apos;&apos;;
+        var bContactUpdated = false;
+        var sConId = &quot;&quot;;
+		for(var i = 0; i &lt; Inputs.GetChild(0).GetChildCount();i++) {
+			if(Inputs.GetChild(0).GetChild(i).GetType() == &quot;sub&quot;) {
+					sCognitoId = Inputs.GetChild(0).GetChild(i).GetProperty(&quot;Value&quot;);
+			}
+			else if(Inputs.GetChild(0).GetChild(i).GetType() == &quot;siq_user_type&quot;) {
+					sSIQUserType = Inputs.GetChild(0).GetChild(i).GetProperty(&quot;Value&quot;);
+			}
+			else if(Inputs.GetChild(0).GetChild(i).GetType() == &quot;customer_number&quot;) {
+					sCustomerNumber = Inputs.GetChild(0).GetChild(i).GetProperty(&quot;Value&quot;);
+			}
+			else if(Inputs.GetChild(0).GetChild(i).GetType() == &quot;order_id&quot;) {
+					sSIQOrderNumber = Inputs.GetChild(0).GetChild(i).GetProperty(&quot;Value&quot;);
+			}
+			else if(Inputs.GetChild(0).GetChild(i).GetType() == &quot;email&quot;) {
+					sEmail = Inputs.GetChild(0).GetChild(i).GetProperty(&quot;Value&quot;);
+			}
+		}
+		if (sSIQUserType != &quot;&quot; &amp;&amp; sSIQUserType != null &amp;&amp; typeof sSIQUserType != &quot;undefined&quot;)
+		sSIQUserType=sSIQUserType.toUpperCase();
+        with(oBC) {
+            //Checking for contact with CognitoId
+            if (sCognitoId != &quot;&quot; &amp;&amp; sCognitoId != null &amp;&amp; typeof sCognitoId != &quot;undefined&quot;) {
+                SetViewMode(AllView);
+                activateFields(oBC);
+                ClearToQuery();
+                SetSearchSpec(&quot;SC Cognito Id&quot;, sCognitoId);
+                ExecuteQuery(ForwardOnly);
+                var bIsRecord = FirstRecord();
+                if (bIsRecord) {
+                    sConId = GetFieldValue(&quot;Id&quot;);
+                    contactUpdate(oBC, Inputs, Outputs);
+                    bContactUpdated = true;
+                }
+            }
+            //Checking for contact with Order Number
+            if (sSIQOrderNumber != &quot;&quot; &amp;&amp; sSIQOrderNumber != null &amp;&amp; typeof sSIQOrderNumber != &quot;undefined&quot;) {
+                if (!bContactUpdated &amp;&amp; sSIQUserType != &quot;SECONDARY&quot;) {
+					var bOrderRecord = false;
+					with(oOrderBC){
+	                    SetViewMode(AllView);
+	                    ActivateField(&quot;Order Number&quot;);
+	                    ClearToQuery();
+	                    SetSearchSpec(&quot;Order Number&quot;, sSIQOrderNumber);
+	                    ExecuteQuery(ForwardOnly);
+	                    bOrderRecord = FirstRecord();
+	                    if (bOrderRecord) {
+	                        sConId = GetFieldValue(&quot;Contact Id&quot;);
+	                    }
+					}
+					if(bOrderRecord){
+						SetViewMode(AllView);
+	                    activateFields(oBC);
+	                    ClearToQuery();
+	                    SetSearchSpec(&quot;Id&quot;, sConId);
+	                    ExecuteQuery(ForwardOnly);
+	                    var bConRecord = FirstRecord();
+	                    if (bConRecord) {
+	                        contactUpdate(oBC, Inputs, Outputs);
+	                        bContactUpdated = true;
+	                    }
+					}
+				}
+            }
+            //Checking for contact with Email1
+            if (sEmail != &quot;&quot; &amp;&amp; sEmail != null &amp;&amp; typeof sEmail != &quot;undefined&quot;) {
+                if (!bContactUpdated) {
+                    SetViewMode(AllView);
+                    activateFields(oBC);
+                    ClearToQuery();
+                    SetSearchSpec(&quot;Email Address&quot;, sEmail);
+                    ExecuteQuery(ForwardOnly);
+                    var bConRecord = FirstRecord();
+                    if (bConRecord) {
+                        sConId = GetFieldValue(&quot;Id&quot;);
+                        contactUpdate(oBC, Inputs, Outputs);
+                        bContactUpdated = true;
+                    }
+                }
+            }
+            //Checking for contact with Email2
+            if (sEmail != &quot;&quot; &amp;&amp; sEmail != null &amp;&amp; typeof sEmail != &quot;undefined&quot;) {
+                if (!bContactUpdated) {
+                    SetViewMode(AllView);
+                    activateFields(oBC);
+                    ClearToQuery();
+                    SetSearchSpec(&quot;Email Address 2&quot;, sEmail);
+                    ExecuteQuery(ForwardOnly);
+                    var bConRecord = FirstRecord();
+                    if (bConRecord) {
+                        sConId = GetFieldValue(&quot;Id&quot;);
+                        contactUpdate(oBC, Inputs, Outputs);
+                        bContactUpdated = true;
+                    }
+                }
+            }
+            //Checking for contact with Customer Number
+            if (sCustomerNumber != &quot;&quot; &amp;&amp; sCustomerNumber != null &amp;&amp; typeof sCustomerNumber != &quot;undefined&quot;) {
+                if (!bContactUpdated) {
+                    SetViewMode(AllView);
+                    activateFields(oBC);
+                    ClearToQuery();
+					if(sSIQUserType != &quot;SECONDARY&quot;){
+						SetSearchSpec(&quot;Customer Number&quot;, sCustomerNumber);
+						ExecuteQuery(ForwardOnly);
+	                    var bConRecord = FirstRecord();
+	                    if (bConRecord) {
+	                        sConId = GetFieldValue(&quot;Id&quot;);
+	                        contactUpdate(oBC, Inputs, Outputs);
+	                        bContactUpdated = true;
+	                    }
+					}
+                }
+            }
+
+            //No Contact found --&gt; creating new Contact
+            if (!bContactUpdated) {
+                activateFields(oBC);
+                createContact(Inputs, Outputs);
+            }
+        }
+        Outputs.SetProperty(&quot;Status&quot;, &quot;Success&quot;);
+    } catch (e) {
+        Outputs.SetProperty(&quot;Status&quot;, &quot;Failure&quot;);
+        Outputs.SetProperty(&quot;Error Msg&quot;, e.toString());
+    } finally {
+        oBC = null;
+        oBO = null;
+    }
+}"
+			   SEQUENCE="5"
+			   UPDATED="09/23/2019 11:50:21"
+			   UPDATED_BY="VALLA"
+			   CREATED="07/30/2019 23:06:41"
+			   CREATED_BY="VALLA">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+		</BUSINESS_SERVICE>
+	</PROJECT>
+</REPOSITORY>
+
+
+
