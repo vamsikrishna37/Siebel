@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<REPOSITORY
+   COMMENTS="Siebel Repository_June_release_2019"
+   NAME="Siebel Repository"
+   UPDATED="06/13/2019 03:14:20"
+   UPDATED_BY="SADMIN"
+   CREATED="06/13/2019 00:00:02"
+   CREATED_BY="SADMIN"
+   FIO_PLACEHOLDER_FIO="TRUE">
+	<PROJECT
+	   ALLOW_OBJECT_LOCKING="Y"
+	   COMMENTS="Bulk Request UI objects: BusObj/BusComp/Screens/Views/Applets"
+	   INACTIVE="N"
+	   LANGUAGE_LOCKED="ENU"
+	   LOCKED="N"
+	   NAME="ABO Bulk Request UI"
+	   UI_FREEZE="N"
+	   UPDATED="04/01/2018 15:55:52"
+	   UPDATED_BY="SADMIN"
+	   CREATED="05/15/2007 22:17:11"
+	   CREATED_BY="SADMIN"
+	   FIO_PLACEHOLDER_FIO="TRUE">
+		<SCREEN
+		   DEFAULT_VIEW="ABO Bulk Request List View"
+		   INACTIVE="N"
+		   NAME="ABO Bulk Request Screen"
+		   OBJECT_LOCKED="N"
+		   UNRESTRICTED_VIEWBAR="N"
+		   UPGRADE_BEHAVIOR="Preserve"
+		   VIEWBAR_TEXT_-_STRING_REFERENCE="SBL_ABO_BRS"
+		   UPDATED="10/11/2019 08:19:32"
+		   UPDATED_BY="KTODETI"
+		   CREATED="05/16/2007 05:47:50"
+		   CREATED_BY="SADMIN">
+			<SCREEN_LOCALE
+			   APPLICATION_CODE="STD"
+			   INACTIVE="N"
+			   LANGUAGE_CODE="ENU"
+			   NAME="ENU-STD"
+			   TRANSLATE="Y"
+			   UPDATED="05/16/2007 05:47:53"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/16/2007 05:47:53"
+			   CREATED_BY="SADMIN">
+			</SCREEN_LOCALE>
+			<SCREEN_VIEW
+			   6_SECTORS="Y"
+			   8_SECTORS="Y"
+			   DISPLAY_IN_PAGE="Y"
+			   DISPLAY_IN_SITE_MAP="Y"
+			   INACTIVE="N"
+			   MENU_TEXT_-_STRING_REFERENCE="SBL_ABO_BR_ACTN_SET_ORDRS"
+			   NAME="ABO Bulk Request Action Set Orders View"
+			   PARENT_CATEGORY="Action Sets"
+			   SEQUENCE="4"
+			   TYPE="Detail View"
+			   VIEW="ABO Bulk Request Action Set Orders View"
+			   VIEWBAR_TEXT_-_STRING_REFERENCE="SBL_ORDERS-1004224541-12M"
+			   UPDATED="03/25/2014 07:26:50"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/16/2007 05:48:06"
+			   CREATED_BY="SADMIN">
+				<SCREEN_VIEW_LOCALE
+				   APPLICATION_CODE="STD"
+				   INACTIVE="N"
+				   LANGUAGE_CODE="ENU"
+				   NAME="ENU-STD"
+				   TRANSLATE="Y"
+				   UPDATED="06/30/2007 04:58:40"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/16/2007 05:49:05"
+				   CREATED_BY="SADMIN">
+				</SCREEN_VIEW_LOCALE>
+			</SCREEN_VIEW>
+			<SCREEN_VIEW
+			   6_SECTORS="Y"
+			   8_SECTORS="Y"
+			   DISPLAY_IN_PAGE="Y"
+			   DISPLAY_IN_SITE_MAP="Y"
+			   INACTIVE="N"
+			   MENU_TEXT_-_STRING_REFERENCE="SBL_ABO_BR_ACTN_SET_QUOTES"
+			   NAME="ABO Bulk Request Action Set Quotes View"
+			   PARENT_CATEGORY="Action Sets"
+			   SEQUENCE="5"
+			   TYPE="Detail View"
+			   VIEW="ABO Bulk Request Action Set Quotes View"
+			   VIEWBAR_TEXT_-_STRING_REFERENCE="SBL_QUOTES-1004225057-4ZU"
+			   UPDATED="03/25/2014 07:26:51"
+			   UPDATED_BY="SADMIN"
+			   CREATED="08/16/2013 19:22:48"
+			   CREATED_BY="SADMIN">
+				<SCREEN_VIEW_LOCALE
+				   APPLICATION_CODE="STD"
+				   INACTIVE="N"
+				   LANGUAGE_CODE="ENU"
+				   NAME="ENU-STD"
+				   TRANSLATE="Y"
+				   UPDATED="08/16/2013 19:24:25"
+				   UPDATED_BY="SADMIN"
+				   CREATED="08/16/2013 19:24:25"
+				   CREATED_BY="SADMIN">
+				</SCREEN_VIEW_LOCALE>
+			</SCREEN_VIEW>
+			<SCREEN_VIEW
+			   6_SECTORS="Y"
+			   8_SECTORS="Y"
+			   DISPLAY_IN_PAGE="Y"
+			   DISPLAY_IN_SITE_MAP="Y"
+			   INACTIVE="N"
+			   MENU_TEXT_-_STRING_REFERENCE="SBL_ABO_BR_EXCPTNS"
+			   NAME="ABO Bulk Request Exceptions List View"
+			   PARENT_CATEGORY="Action Sets"
+			   SEQUENCE="3"
+			   TYPE="Detail View"
+			   VIEW="ABO Bulk Request Exceptions List View"
+			   VIEWBAR_TEXT_-_STRING_REFERENCE="SBL_ABO_EXCPTNS"
+			   UPDATED="03/25/2014 07:26:51"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/16/2007 05:48:06"
+			   CREATED_BY="SADMIN">
+				<SCREEN_VIEW_LOCALE
+				   APPLICATION_CODE="STD"
+				   INACTIVE="N"
+				   LANGUAGE_CODE="ENU"
+				   NAME="ENU-STD"
+				   TRANSLATE="Y"
+				   UPDATED="06/30/2007 04:58:40"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/16/2007 05:49:05"
+				   CREATED_BY="SADMIN">
+				</SCREEN_VIEW_LOCALE>
+			</SCREEN_VIEW>
+			<SCREEN_VIEW
+			   6_SECTORS="Y"
+			   8_SECTORS="Y"
+			   DISPLAY_IN_PAGE="Y"
+			   DISPLAY_IN_SITE_MAP="Y"
+			   INACTIVE="N"
+			   MENU_TEXT_-_STRING_REFERENCE="SBL_ABO_BR_EXCPTNS"
+			   NAME="ABO Bulk Request Explode Exceptions View"
+			   PARENT_CATEGORY="Action Set Template"
+			   SEQUENCE="8"
+			   TYPE="Detail View"
+			   VIEW="ABO Bulk Request Explode Exceptions View"
+			   VIEWBAR_TEXT_-_STRING_REFERENCE="SBL_ABO_EXCPTNS"
+			   UPDATED="03/25/2014 07:26:51"
+			   UPDATED_BY="SADMIN"
+			   CREATED="08/16/2013 19:22:48"
+			   CREATED_BY="SADMIN">
+				<SCREEN_VIEW_LOCALE
+				   APPLICATION_CODE="STD"
+				   INACTIVE="N"
+				   LANGUAGE_CODE="ENU"
+				   NAME="ENU-STD"
+				   TRANSLATE="Y"
+				   UPDATED="08/16/2013 19:24:26"
+				   UPDATED_BY="SADMIN"
+				   CREATED="08/16/2013 19:24:26"
+				   CREATED_BY="SADMIN">
+				</SCREEN_VIEW_LOCALE>
+			</SCREEN_VIEW>
+			<SCREEN_VIEW
+			   6_SECTORS="Y"
+			   8_SECTORS="Y"
+			   DISPLAY_IN_PAGE="Y"
+			   DISPLAY_IN_SITE_MAP="Y"
+			   INACTIVE="N"
+			   MENU_TEXT_-_STRING_REFERENCE="SBL_ABO_BRS"
+			   NAME="ABO Bulk Request List View"
+			   PARENT_CATEGORY="Bulk Requests List"
+			   SEQUENCE="11"
+			   TYPE="Aggregate View"
+			   VIEW="ABO Bulk Request List View"
+			   VIEWBAR_TEXT_-_STRING_REFERENCE="SBL_ABO_BRS"
+			   UPDATED="03/25/2014 07:26:52"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/16/2007 05:48:06"
+			   CREATED_BY="SADMIN">
+				<SCREEN_VIEW_LOCALE
+				   APPLICATION_CODE="STD"
+				   INACTIVE="N"
+				   LANGUAGE_CODE="ENU"
+				   NAME="ENU-STD"
+				   TRANSLATE="Y"
+				   UPDATED="06/30/2007 04:58:40"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/16/2007 05:49:05"
+				   CREATED_BY="SADMIN">
+				</SCREEN_VIEW_LOCALE>
+			</SCREEN_VIEW>
+			<SCREEN_VIEW
+			   6_SECTORS="Y"
+			   8_SECTORS="Y"
+			   DISPLAY_IN_PAGE="Y"
+			   DISPLAY_IN_SITE_MAP="Y"
+			   INACTIVE="N"
+			   MENU_TEXT_-_STRING_REFERENCE="SBL_BULK_REQUEST_ACTION_SET_TEMPLATE"
+			   NAME="ABO Bulk Request Template View"
+			   PARENT_CATEGORY="Action Set Template"
+			   SEQUENCE="7"
+			   TYPE="Detail View"
+			   VIEW="ABO Bulk Request Template View"
+			   VIEWBAR_TEXT_-_STRING_REFERENCE="SBL_ACTION_SET_TEMPLATE"
+			   UPDATED="03/25/2014 07:26:52"
+			   UPDATED_BY="SADMIN"
+			   CREATED="08/16/2013 19:22:48"
+			   CREATED_BY="SADMIN">
+				<SCREEN_VIEW_LOCALE
+				   APPLICATION_CODE="STD"
+				   INACTIVE="N"
+				   LANGUAGE_CODE="ENU"
+				   NAME="ENU-STD"
+				   TRANSLATE="Y"
+				   UPDATED="08/16/2013 19:24:26"
+				   UPDATED_BY="SADMIN"
+				   CREATED="08/16/2013 19:24:26"
+				   CREATED_BY="SADMIN">
+				</SCREEN_VIEW_LOCALE>
+			</SCREEN_VIEW>
+			<SCREEN_VIEW
+			   6_SECTORS="Y"
+			   8_SECTORS="Y"
+			   DISPLAY_IN_PAGE="Y"
+			   DISPLAY_IN_SITE_MAP="Y"
+			   INACTIVE="N"
+			   MENU_TEXT_-_STRING_REFERENCE="SBL_ABO_BR_USRS_&amp;_ACTNS"
+			   NAME="ABO Bulk Request Users Actions View"
+			   PARENT_CATEGORY="Action Sets"
+			   SEQUENCE="2"
+			   TYPE="Detail View"
+			   VIEW="ABO Bulk Request Users Actions View"
+			   VIEWBAR_TEXT_-_STRING_REFERENCE="SBL_ABO_USRS_&amp;_ACTNS"
+			   UPDATED="03/25/2014 07:26:52"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/16/2007 05:48:06"
+			   CREATED_BY="SADMIN">
+				<SCREEN_VIEW_LOCALE
+				   APPLICATION_CODE="STD"
+				   INACTIVE="N"
+				   LANGUAGE_CODE="ENU"
+				   NAME="ENU-STD"
+				   TRANSLATE="Y"
+				   UPDATED="06/30/2007 04:58:40"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/16/2007 05:49:05"
+				   CREATED_BY="SADMIN">
+				</SCREEN_VIEW_LOCALE>
+			</SCREEN_VIEW>
+			<SCREEN_VIEW
+			   6_SECTORS="Y"
+			   8_SECTORS="Y"
+			   DISPLAY_IN_PAGE="N"
+			   DISPLAY_IN_SITE_MAP="N"
+			   INACTIVE="N"
+			   NAME="ABO Order Item Drill Down View"
+			   PARENT_CATEGORY="Bulk Requests List"
+			   SEQUENCE="9"
+			   TYPE="Detail View"
+			   VIEW="ABO Order Item Drill Down View"
+			   UPDATED="03/25/2014 07:26:52"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/16/2007 05:48:06"
+			   CREATED_BY="SADMIN">
+			</SCREEN_VIEW>
+			<SCREEN_VIEW
+			   6_SECTORS="Y"
+			   8_SECTORS="Y"
+			   DISPLAY_IN_PAGE="N"
+			   DISPLAY_IN_SITE_MAP="N"
+			   INACTIVE="N"
+			   NAME="ABO Quote Item Drill Down View"
+			   PARENT_CATEGORY="Bulk Requests List"
+			   SEQUENCE="12"
+			   TYPE="Detail View"
+			   VIEW="ABO Quote Item Drill Down View"
+			   UPDATED="03/25/2014 07:26:52"
+			   UPDATED_BY="SADMIN"
+			   CREATED="08/16/2013 19:22:48"
+			   CREATED_BY="SADMIN">
+			</SCREEN_VIEW>
+			<SCREEN_VIEW
+			   6_SECTORS="Y"
+			   8_SECTORS="Y"
+			   CATEGORY_DEFAULT_VIEW="ABO Bulk Request Template View"
+			   CATEGORY_NAME="Action Set Template"
+			   DISPLAY_IN_PAGE="Y"
+			   DISPLAY_IN_SITE_MAP="Y"
+			   INACTIVE="N"
+			   MENU_TEXT_-_STRING_REFERENCE="SBL_ACTION_SET_TEMPLATE"
+			   NAME="Action Set Template"
+			   PARENT_CATEGORY="Bulk Requests List"
+			   SEQUENCE="6"
+			   TYPE="Detail Category"
+			   VIEWBAR_TEXT_-_STRING_REFERENCE="SBL_ACTION_SET_TEMPLATE"
+			   UPDATED="03/25/2014 07:26:52"
+			   UPDATED_BY="SADMIN"
+			   CREATED="08/16/2013 19:22:48"
+			   CREATED_BY="SADMIN">
+				<SCREEN_VIEW_LOCALE
+				   APPLICATION_CODE="STD"
+				   INACTIVE="N"
+				   LANGUAGE_CODE="ENU"
+				   NAME="ENU-STD"
+				   TRANSLATE="Y"
+				   UPDATED="08/16/2013 19:24:26"
+				   UPDATED_BY="SADMIN"
+				   CREATED="08/16/2013 19:24:26"
+				   CREATED_BY="SADMIN">
+				</SCREEN_VIEW_LOCALE>
+			</SCREEN_VIEW>
+			<SCREEN_VIEW
+			   6_SECTORS="Y"
+			   8_SECTORS="Y"
+			   CATEGORY_DEFAULT_VIEW="ABO Bulk Request Users Actions View"
+			   CATEGORY_NAME="Action Sets"
+			   DISPLAY_IN_PAGE="Y"
+			   DISPLAY_IN_SITE_MAP="Y"
+			   INACTIVE="N"
+			   MENU_TEXT_-_STRING_REFERENCE="SBL_ACTION_SETS-1004224548-13K"
+			   NAME="Action Sets"
+			   PARENT_CATEGORY="Bulk Requests List"
+			   SEQUENCE="13"
+			   TYPE="Detail Category"
+			   VIEWBAR_TEXT_-_STRING_REFERENCE="SBL_ACTION_SETS-1004224548-13K"
+			   UPDATED="03/25/2014 07:26:53"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/16/2007 05:48:06"
+			   CREATED_BY="SADMIN">
+				<SCREEN_VIEW_LOCALE
+				   APPLICATION_CODE="STD"
+				   INACTIVE="N"
+				   LANGUAGE_CODE="ENU"
+				   NAME="ENU-STD"
+				   TRANSLATE="Y"
+				   UPDATED="06/30/2007 04:58:40"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/16/2007 05:49:05"
+				   CREATED_BY="SADMIN">
+				</SCREEN_VIEW_LOCALE>
+			</SCREEN_VIEW>
+			<SCREEN_VIEW
+			   6_SECTORS="Y"
+			   8_SECTORS="Y"
+			   CATEGORY_DEFAULT_VIEW="ABO Bulk Request List View"
+			   CATEGORY_NAME="Bulk Requests List"
+			   DISPLAY_IN_PAGE="Y"
+			   DISPLAY_IN_SITE_MAP="Y"
+			   INACTIVE="N"
+			   MENU_TEXT_-_STRING_REFERENCE="SBL_ABO_BR_LIST"
+			   NAME="Bulk Requests List"
+			   SEQUENCE="1"
+			   TYPE="Aggregate Category"
+			   VIEWBAR_TEXT_-_STRING_REFERENCE="SBL_ABO_BR_LIST"
+			   UPDATED="08/16/2013 19:22:48"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/16/2007 05:48:06"
+			   CREATED_BY="SADMIN">
+				<SCREEN_VIEW_LOCALE
+				   APPLICATION_CODE="STD"
+				   INACTIVE="N"
+				   LANGUAGE_CODE="ENU"
+				   NAME="ENU-STD"
+				   TRANSLATE="Y"
+				   UPDATED="06/30/2007 04:58:41"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/16/2007 05:49:05"
+				   CREATED_BY="SADMIN">
+				</SCREEN_VIEW_LOCALE>
+			</SCREEN_VIEW>
+			<SCREEN_VIEW
+			   6_SECTORS="Y"
+			   8_SECTORS="Y"
+			   DISPLAY_IN_PAGE="N"
+			   DISPLAY_IN_SITE_MAP="N"
+			   INACTIVE="N"
+			   NAME="SIS OM Warning Message View (ABO Bulk Request)"
+			   PARENT_CATEGORY="Bulk Requests List"
+			   SEQUENCE="10"
+			   TYPE="Detail View"
+			   VIEW="SIS OM Warning Message View (ABO Bulk Request)"
+			   UPDATED="03/25/2014 07:26:53"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/16/2007 05:48:06"
+			   CREATED_BY="SADMIN">
+			</SCREEN_VIEW>
+		</SCREEN>
+	</PROJECT>
+</REPOSITORY>
+
+
+
