@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<REPOSITORY
+   COMMENTS="Siebel Repository_June_release_2019"
+   NAME="Siebel Repository"
+   UPDATED="06/13/2019 03:14:20"
+   UPDATED_BY="SADMIN"
+   CREATED="06/13/2019 00:00:02"
+   CREATED_BY="SADMIN"
+   FIO_PLACEHOLDER_FIO="TRUE">
+	<PROJECT
+	   ALLOW_OBJECT_LOCKING="Y"
+	   COMMENTS="SNARRA:26-06-2019:Addeed Project for CX Cloud"
+	   INACTIVE="N"
+	   LOCKED="N"
+	   NAME="SC CX Cloud"
+	   UI_FREEZE="N"
+	   UPDATED="10/17/2019 06:39:34"
+	   UPDATED_BY="KTODETI"
+	   CREATED="06/26/2019 05:53:20"
+	   CREATED_BY="SNARRA"
+	   FIO_PLACEHOLDER_FIO="TRUE">
+		<BUSINESS_SERVICE
+		   CACHE="N"
+		   CLASS="CSSService"
+		   COMMENTS="KTODETI:17-10-2019 Added for STRY0012754"
+		   EXTERNAL_USE="N"
+		   HIDDEN="N"
+		   INACTIVE="N"
+		   NAME="SC LOV Description"
+		   OBJECT_LOCKED="N"
+		   SERVER_ENABLED="N"
+		   STATE_MANAGEMENT_TYPE="Stateful"
+		   WEB_SERVICE_ENABLED="N"
+		   UPDATED="10/17/2019 06:43:44"
+		   UPDATED_BY="KTODETI"
+		   CREATED="10/17/2019 02:00:39"
+		   CREATED_BY="KTODETI">
+			<BUSINESS_SERVICE_LOCALE
+			   APPLICATION_CODE="STD"
+			   DISPLAY_NAME="SC Check LOV Values"
+			   INACTIVE="N"
+			   LANGUAGE_CODE="ENU"
+			   NAME="ENU-STD"
+			   TRANSLATE="Y"
+			   UPDATED="10/17/2019 02:50:02"
+			   UPDATED_BY="KTODETI"
+			   CREATED="10/17/2019 02:50:02"
+			   CREATED_BY="KTODETI">
+			</BUSINESS_SERVICE_LOCALE>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="GetLOVDescr"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function GetLOVDescr(Inputs, Outputs){
+
+	 var isRecord=&quot;&quot;,LOVdesc=&quot;&quot;,lsLOVBO,lsLOVBC;
+     lsLOVBO = TheApplication().GetBusObject(&quot;List Of Values&quot;);
+	 lsLOVBC = lsLOVBO.GetBusComp(&quot;List Of Values&quot;); 
+	 var searchExpr = Inputs.GetProperty(&quot;searchExpr&quot;);
+	 try{
+		with(lsLOVBC) 
+			{ 
+				SetViewMode(AllView); 
+				ClearToQuery(); 
+				ActivateField(&quot;Description&quot;)
+				SetSearchExpr(searchExpr);   
+				ExecuteQuery(ForwardOnly);
+				isRecord = FirstRecord();  
+				if(isRecord) 
+					{ 
+						LOVdesc=GetFieldValue(&quot;Description&quot;);
+					
+					} 
+			}
+			Outputs.SetProperty(&quot;DESC&quot;,LOVdesc);
+       }
+	   catch(e){
+	   TheApplication().RaiseErrorText(&quot;Error&quot;+e);
+       }
+	   finally{
+		  lsLOVBC = null, lsLOVBO = null,searchExpr = null,isRecord = null;
+       }
+  }
+"
+			   SEQUENCE="1"
+			   UPDATED="10/17/2019 05:08:57"
+			   UPDATED_BY="KTODETI"
+			   CREATED="10/17/2019 02:53:56"
+			   CREATED_BY="KTODETI">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="Service_PreInvokeMethod"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="/************************************
+
+Author: Kavya Todeti
+Purpose:To get the LOV Description
+
+*************************************/
+function Service_PreInvokeMethod (MethodName, Inputs, Outputs)
+{
+
+
+  if(MethodName == &quot;GetLOVDescr&quot;){
+	GetLOVDescr(Inputs, Outputs)
+	 return (CancelOperation);  
+    }
+  return (ContinueOperation);
+}
+"
+			   SEQUENCE="2"
+			   UPDATED="10/17/2019 03:24:11"
+			   UPDATED_BY="KTODETI"
+			   CREATED="10/17/2019 02:50:59"
+			   CREATED_BY="KTODETI">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+		</BUSINESS_SERVICE>
+	</PROJECT>
+</REPOSITORY>
+
+
+
