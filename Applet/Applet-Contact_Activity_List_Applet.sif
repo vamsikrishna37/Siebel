@@ -14,7 +14,7 @@
 	   LOCKED="N"
 	   NAME="Contact (SSE)"
 	   UI_FREEZE="N"
-	   UPDATED="11/01/2019 05:41:52"
+	   UPDATED="11/06/2019 02:46:25"
 	   UPDATED_BY="KTODETI"
 	   CREATED="12/31/1979 18:00:00"
 	   CREATED_BY="SADMIN"
@@ -38,7 +38,7 @@
 		   TYPE="Standard"
 		   UPGRADE_BEHAVIOR="Preserve"
 		   WIDTH="2"
-		   UPDATED="11/04/2019 05:31:51"
+		   UPDATED="11/06/2019 04:17:18"
 		   UPDATED_BY="KTODETI"
 		   CREATED="05/31/2001 13:52:11"
 		   CREATED_BY="SADMIN">
@@ -141,8 +141,8 @@ return (ContinueOperation);
 			   COMMENTS="KTODETI:Added for CX Cloud Project"
 			   INACTIVE="N"
 			   NAME="CanInvokeMethod: ProcessActivity"
-			   VALUE="[SC Request Status] = &apos;Failed&apos; OR [SC Request Status] = &apos;Incomplete&apos;"
-			   UPDATED="10/24/2019 05:00:13"
+			   VALUE="[SC Request Status] = &apos;Failed&apos; OR [SC Request Status] = &apos;Incomplete&apos; OR [SC Request Status] = &apos;Not Submitted&apos;"
+			   UPDATED="11/06/2019 02:46:25"
 			   UPDATED_BY="KTODETI"
 			   CREATED="10/07/2019 02:56:15"
 			   CREATED_BY="KTODETI">
