@@ -14,7 +14,7 @@
 	   LOCKED="N"
 	   NAME="Activity (SSE)"
 	   UI_FREEZE="N"
-	   UPDATED="11/08/2019 01:21:27"
+	   UPDATED="11/08/2019 04:10:05"
 	   UPDATED_BY="KTODETI"
 	   CREATED="12/31/1979 18:00:00"
 	   CREATED_BY="SADMIN"
@@ -41,7 +41,7 @@
 		   TYPE="Standard"
 		   UPGRADE_BEHAVIOR="Preserve"
 		   WIDTH="2"
-		   UPDATED="11/08/2019 02:13:05"
+		   UPDATED="11/08/2019 06:09:30"
 		   UPDATED_BY="KTODETI"
 		   CREATED="12/31/1979 18:00:00"
 		   CREATED_BY="SADMIN">
@@ -160,8 +160,8 @@ catch(e)
 			   COMMENTS="KTODETI:11-07-2019 added for  CX Cloud STRY0015633"
 			   INACTIVE="N"
 			   NAME="CanInvokeMethod: ProcessActivity"
-			   VALUE=" [SC Request Status] = &apos;Not Submitted&apos; AND GetProfileAttr(&quot;Primary Responsibility Name&quot;) = &quot;SC KM Administration&quot;"
-			   UPDATED="11/08/2019 01:21:27"
+			   VALUE="([SC Request Status] = &apos;Not Submitted&apos; AND [Is KMuser] = &quot;Y&quot;) OR (([SC Request Status] = &apos;Failed&apos; OR [SC Request Status] = &apos;Incomplete&apos;) AND GetProfileAttr(&quot;SC Primary Division Sub Type&quot;) = &quot;CS&quot;)"
+			   UPDATED="11/08/2019 04:10:05"
 			   UPDATED_BY="KTODETI"
 			   CREATED="11/07/2019 01:34:38"
 			   CREATED_BY="KTODETI">
