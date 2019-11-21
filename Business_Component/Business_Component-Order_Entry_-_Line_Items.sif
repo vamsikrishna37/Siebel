@@ -13,7 +13,7 @@
 	   LOCKED="N"
 	   NAME="Order Entry"
 	   UI_FREEZE="N"
-	   UPDATED="11/21/2019 04:13:03"
+	   UPDATED="11/21/2019 05:51:37"
 	   UPDATED_BY="KTODETI"
 	   CREATED="08/17/1998 13:50:31"
 	   CREATED_BY="SADMIN"
@@ -45,7 +45,7 @@ will change to CSSBCCGOrderItem in the future Changed Search Spec for CR 12-L4ZH
 		   SCRIPTED="Y"
 		   TABLE="S_ORDER_ITEM"
 		   TYPE="Non-Transient"
-		   UPDATED="11/21/2019 04:13:32"
+		   UPDATED="11/21/2019 05:52:35"
 		   UPDATED_BY="KTODETI"
 		   CREATED="08/17/1998 14:48:02"
 		   CREATED_BY="SADMIN">
@@ -812,11 +812,13 @@ SPATIBAN:08-AUG-2018:Modifeid Code for OHQ PHQ SC Sales Efficiency Project
 								DisReason=&quot;&quot;;
 						    	}
 								 this.SetFieldValue(&quot;Discount Percent&quot;,orderdiscper);
+								 this.SetFieldValue(&quot;SC Manual Discount Update Flag&quot;,&quot;Y&quot;);
 								 this.InvokeMethod(&quot;WriteRecord&quot;);
 								 DisPer = &quot;&quot;;	
 						   }else{
                                  this.SetFieldValue(&quot;SC Manual Discount Reason&quot;,DisReason);
 								 this.SetFieldValue(&quot;Discount Percent&quot;,DisPer);
+								 this.SetFieldValue(&quot;SC Manual Discount Update Flag&quot;,&quot;N&quot;);
 								 this.InvokeMethod(&quot;WriteRecord&quot;); 
 								  DisReason = &quot;&quot;;
 								  DisPer = &quot;&quot;;
@@ -824,17 +826,19 @@ SPATIBAN:08-AUG-2018:Modifeid Code for OHQ PHQ SC Sales Efficiency Project
 						   }
 						}else if(orderdiscamt!=null &amp;&amp; orderdiscamt!=&quot;&quot;){
 						 if(parseFloat(orderdiscamt)&lt;= parseFloat(disamt)){
-                               if(ordermanualreason!=null &amp;&amp; ordermanualreason!=&quot;&quot;){
-								this.SetFieldValue(&quot;SC Manual Discount Reason&quot;,ordermanualreason);
-								this.InvokeMethod(&quot;WriteRecord&quot;);
-								DisReason = &quot;&quot;;
-						    	}
-								  this.SetFieldValue(&quot;Discount Amount - Display&quot;,orderdiscamt);
-								  this.InvokeMethod(&quot;WriteRecord&quot;);	
-								  DisAmount = &quot;&quot;;
+	                          if(ordermanualreason!=null &amp;&amp; ordermanualreason!=&quot;&quot;){
+									this.SetFieldValue(&quot;SC Manual Discount Reason&quot;,ordermanualreason);
+									this.InvokeMethod(&quot;WriteRecord&quot;);
+									DisReason = &quot;&quot;;
+						      }
+							  this.SetFieldValue(&quot;Discount Amount - Display&quot;,orderdiscamt);
+							  this.SetFieldValue(&quot;SC Manual Discount Update Flag&quot;,&quot;Y&quot;);
+							  this.InvokeMethod(&quot;WriteRecord&quot;);	
+							  DisAmount = &quot;&quot;;
 						   }else{
                                  this.SetFieldValue(&quot;SC Manual Discount Reason&quot;,DisReason);
 								 this.SetFieldValue(&quot;Discount Amount - Display&quot;,DisAmount);
+								 this.SetFieldValue(&quot;SC Manual Discount Update Flag&quot;,&quot;N&quot;);
 								 this.InvokeMethod(&quot;WriteRecord&quot;); 
 								  DisReason = &quot;&quot;;
 								  DisAmount = &quot;&quot;;
@@ -846,6 +850,7 @@ SPATIBAN:08-AUG-2018:Modifeid Code for OHQ PHQ SC Sales Efficiency Project
                         this.SetFieldValue(&quot;SC Manual Discount Reason&quot;,DisReason);
 						 this.SetFieldValue(&quot;Discount Percent&quot;,DisPer);
 						 this.SetFieldValue(&quot;Discount Amount - Display&quot;,DisAmount);
+						 this.SetFieldValue(&quot;SC Manual Discount Update Flag&quot;,&quot;N&quot;)
 						 this.InvokeMethod(&quot;WriteRecord&quot;); 
 						  DisReason = &quot;&quot;;
 						  DisAmount = &quot;&quot;;
@@ -857,6 +862,7 @@ SPATIBAN:08-AUG-2018:Modifeid Code for OHQ PHQ SC Sales Efficiency Project
 			     this.SetFieldValue(&quot;SC Manual Discount Reason&quot;,DisReason);
 				 this.SetFieldValue(&quot;Discount Percent&quot;,DisPer);
 				 this.SetFieldValue(&quot;Discount Amount - Display&quot;,DisAmount);
+				 this.SetFieldValue(&quot;SC Manual Discount Update Flag&quot;,&quot;N&quot;)
 				 this.InvokeMethod(&quot;WriteRecord&quot;); 
 				  DisReason = &quot;&quot;;
 				  DisAmount = &quot;&quot;;
@@ -896,8 +902,8 @@ SPATIBAN:08-AUG-2018:Modifeid Code for OHQ PHQ SC Sales Efficiency Project
 	}	
 }"
 			   SEQUENCE="25"
-			   UPDATED="10/18/2019 07:39:50"
-			   UPDATED_BY="SPATIBAN"
+			   UPDATED="11/21/2019 05:51:37"
+			   UPDATED_BY="KTODETI"
 			   CREATED="02/03/2013 11:09:03"
 			   CREATED_BY="SADMIN">
 			</BUSCOMP_SERVER_SCRIPT>
