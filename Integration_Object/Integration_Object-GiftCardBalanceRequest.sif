@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<REPOSITORY
+   COMMENTS="Siebel Repository_June_release_2019"
+   NAME="Siebel Repository"
+   UPDATED="06/13/2019 03:14:20"
+   UPDATED_BY="SADMIN"
+   CREATED="06/13/2019 00:00:02"
+   CREATED_BY="SADMIN"
+   FIO_PLACEHOLDER_FIO="TRUE">
+	<PROJECT
+	   ALLOW_OBJECT_LOCKING="Y"
+	   COMMENTS="[VAMSI: 16-Sept-2018 : Created for P2PE Payments]"
+	   INACTIVE="N"
+	   LANGUAGE_LOCKED="ENU"
+	   LOCKED="Y"
+	   LOCKED_DATE="11/20/2019 23:35:14"
+	   NAME="SC P2PE Payments"
+	   UI_FREEZE="N"
+	   LOCKED_BY_NAME="KTODETI"
+	   UPDATED="11/21/2019 00:36:24"
+	   UPDATED_BY="KTODETI"
+	   CREATED="11/08/2018 23:44:51"
+	   CREATED_BY="SADMIN"
+	   FIO_PLACEHOLDER_FIO="TRUE">
+		<INTEGRATION_OBJECT
+		   BASE_OBJECT_TYPE="XML"
+		   EXTERNAL_NAME="GiftCardBalanceRequest"
+		   INACTIVE="N"
+		   NAME="GiftCardBalanceRequest"
+		   OBJECT_LOCKED="N"
+		   UPDATED="11/21/2019 00:48:56"
+		   UPDATED_BY="KTODETI"
+		   CREATED="05/14/2019 04:56:39"
+		   CREATED_BY="SADMIN">
+			<INTEGRATION_COMPONENT
+			   ADAPTER_INFO="/GiftCardBalanceRequest"
+			   CARDINALITY="One"
+			   EXTERNAL_NAME="GiftCardBalanceRequest"
+			   EXTERNAL_SEQUENCE="1"
+			   INACTIVE="N"
+			   NAME="GiftCardBalanceRequest"
+			   SHARE="N"
+			   XML_SEQUENCE="1"
+			   XML_TAG="GiftCardBalanceRequest"
+			   UPDATED="05/14/2019 04:56:39"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/14/2019 04:56:39"
+			   CREATED_BY="SADMIN">
+				<INTEGRATION_COMPONENT_USER_PROP
+				   INACTIVE="N"
+				   NAME="XMLTagNamespace"
+				   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+				   UPDATED="05/14/2019 04:56:39"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:56:39"
+				   CREATED_BY="SADMIN">
+				</INTEGRATION_COMPONENT_USER_PROP>
+			</INTEGRATION_COMPONENT>
+			<INTEGRATION_COMPONENT
+			   ADAPTER_INFO="/GiftCardBalanceRequest/InquiryRequest"
+			   CARDINALITY="One"
+			   EXTERNAL_NAME="InquiryRequest"
+			   EXTERNAL_SEQUENCE="2"
+			   INACTIVE="N"
+			   NAME="InquiryRequest"
+			   PARENT_INTEGRATION_COMPONENT="GiftCardBalanceRequest"
+			   SHARE="N"
+			   XML_SEQUENCE="2"
+			   XML_TAG="InquiryRequest"
+			   UPDATED="05/14/2019 04:56:45"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/14/2019 04:56:40"
+			   CREATED_BY="SADMIN">
+				<INTEGRATION_COMPONENT_FIELD
+				   ADAPTER_INFO="/AccessToken"
+				   EXTERNAL_NAME="AccessToken"
+				   EXTERNAL_REQUIRED="N"
+				   EXTERNAL_SEQUENCE="3"
+				   FIELD_TYPE="Data"
+				   INACTIVE="N"
+				   NAME="AccessToken"
+				   PHYSICAL_DATA_TYPE="DTYPE_TEXT"
+				   REQUIRED="N"
+				   USER_VISIBLE="Y"
+				   XML_SEQUENCE="3"
+				   XML_STYLE="Element"
+				   XML_TAG="AccessToken"
+				   UPDATED="05/14/2019 04:56:40"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:56:40"
+				   CREATED_BY="SADMIN">
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLTagNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:56:40"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:40"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeName"
+					   VALUE="string"
+					   UPDATED="05/14/2019 04:56:40"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:40"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeNamespace"
+					   VALUE="http://www.w3.org/2001/XMLSchema"
+					   UPDATED="05/14/2019 04:56:40"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:40"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+				</INTEGRATION_COMPONENT_FIELD>
+				<INTEGRATION_COMPONENT_FIELD
+				   ADAPTER_INFO="/LocalIP"
+				   EXTERNAL_LENGTH="32"
+				   EXTERNAL_NAME="LocalIP"
+				   EXTERNAL_REQUIRED="N"
+				   EXTERNAL_SEQUENCE="8"
+				   FIELD_TYPE="Data"
+				   INACTIVE="N"
+				   LENGTH="32"
+				   NAME="LocalIP"
+				   PHYSICAL_DATA_TYPE="DTYPE_TEXT"
+				   REQUIRED="N"
+				   USER_VISIBLE="Y"
+				   XML_SEQUENCE="8"
+				   XML_STYLE="Element"
+				   XML_TAG="LocalIP"
+				   UPDATED="05/14/2019 04:56:41"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:56:41"
+				   CREATED_BY="SADMIN">
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLTagNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:56:41"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:41"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeName"
+					   VALUE="string32"
+					   UPDATED="05/14/2019 04:56:41"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:41"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:56:41"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:41"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+				</INTEGRATION_COMPONENT_FIELD>
+				<INTEGRATION_COMPONENT_FIELD
+				   ADAPTER_INFO="/RequestorReference"
+				   EXTERNAL_LENGTH="12"
+				   EXTERNAL_NAME="RequestorReference"
+				   EXTERNAL_REQUIRED="N"
+				   EXTERNAL_SEQUENCE="4"
+				   FIELD_TYPE="Data"
+				   INACTIVE="N"
+				   LENGTH="12"
+				   NAME="RequestorReference"
+				   PHYSICAL_DATA_TYPE="DTYPE_TEXT"
+				   REQUIRED="N"
+				   USER_VISIBLE="Y"
+				   XML_SEQUENCE="4"
+				   XML_STYLE="Element"
+				   XML_TAG="RequestorReference"
+				   UPDATED="05/14/2019 04:56:42"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:56:41"
+				   CREATED_BY="SADMIN">
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLTagNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:56:42"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:42"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeName"
+					   VALUE="string12"
+					   UPDATED="05/14/2019 04:56:42"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:42"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:56:42"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:42"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+				</INTEGRATION_COMPONENT_FIELD>
+				<INTEGRATION_COMPONENT_FIELD
+				   ADAPTER_INFO="/TerminalID"
+				   EXTERNAL_LENGTH="32"
+				   EXTERNAL_NAME="TerminalID"
+				   EXTERNAL_REQUIRED="N"
+				   EXTERNAL_SEQUENCE="7"
+				   FIELD_TYPE="Data"
+				   INACTIVE="N"
+				   LENGTH="32"
+				   NAME="TerminalID"
+				   PHYSICAL_DATA_TYPE="DTYPE_TEXT"
+				   REQUIRED="N"
+				   USER_VISIBLE="Y"
+				   XML_SEQUENCE="7"
+				   XML_STYLE="Element"
+				   XML_TAG="TerminalID"
+				   UPDATED="05/14/2019 04:56:43"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:56:42"
+				   CREATED_BY="SADMIN">
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLTagNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:56:42"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:42"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeName"
+					   VALUE="string32"
+					   UPDATED="05/14/2019 04:56:43"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:43"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:56:43"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:43"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+				</INTEGRATION_COMPONENT_FIELD>
+				<INTEGRATION_COMPONENT_FIELD
+				   ADAPTER_INFO="/UniqueID"
+				   EXTERNAL_LENGTH="16"
+				   EXTERNAL_NAME="UniqueID"
+				   EXTERNAL_REQUIRED="N"
+				   EXTERNAL_SEQUENCE="5"
+				   FIELD_TYPE="Data"
+				   INACTIVE="N"
+				   LENGTH="16"
+				   NAME="UniqueID"
+				   PHYSICAL_DATA_TYPE="DTYPE_TEXT"
+				   REQUIRED="N"
+				   USER_VISIBLE="Y"
+				   XML_SEQUENCE="5"
+				   XML_STYLE="Element"
+				   XML_TAG="UniqueID"
+				   UPDATED="05/14/2019 04:56:44"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:56:43"
+				   CREATED_BY="SADMIN">
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLTagNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:56:43"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:43"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeName"
+					   VALUE="string16"
+					   UPDATED="05/14/2019 04:56:44"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:44"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:56:44"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:44"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+				</INTEGRATION_COMPONENT_FIELD>
+				<INTEGRATION_COMPONENT_FIELD
+				   ADAPTER_INFO="/Vendor"
+				   EXTERNAL_NAME="Vendor"
+				   EXTERNAL_REQUIRED="N"
+				   EXTERNAL_SEQUENCE="6"
+				   FIELD_TYPE="Data"
+				   INACTIVE="N"
+				   NAME="Vendor"
+				   PHYSICAL_DATA_TYPE="DTYPE_TEXT"
+				   REQUIRED="N"
+				   USER_VISIBLE="Y"
+				   XML_SEQUENCE="6"
+				   XML_STYLE="Element"
+				   XML_TAG="Vendor"
+				   UPDATED="05/14/2019 04:56:45"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:56:44"
+				   CREATED_BY="SADMIN">
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLTagNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:56:44"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:44"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeName"
+					   VALUE="string"
+					   UPDATED="05/14/2019 04:56:44"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:44"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeNamespace"
+					   VALUE="http://www.w3.org/2001/XMLSchema"
+					   UPDATED="05/14/2019 04:56:45"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:56:44"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+				</INTEGRATION_COMPONENT_FIELD>
+				<INTEGRATION_COMPONENT_USER_PROP
+				   INACTIVE="N"
+				   NAME="XMLTagNamespace"
+				   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+				   UPDATED="05/14/2019 04:56:45"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:56:45"
+				   CREATED_BY="SADMIN">
+				</INTEGRATION_COMPONENT_USER_PROP>
+				<INTEGRATION_COMPONENT_USER_PROP
+				   INACTIVE="N"
+				   NAME="XSDTypeName"
+				   VALUE="InquiryRequestType"
+				   UPDATED="05/14/2019 04:56:45"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:56:45"
+				   CREATED_BY="SADMIN">
+				</INTEGRATION_COMPONENT_USER_PROP>
+				<INTEGRATION_COMPONENT_USER_PROP
+				   INACTIVE="N"
+				   NAME="XSDTypeNamespace"
+				   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+				   UPDATED="05/14/2019 04:56:45"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:56:45"
+				   CREATED_BY="SADMIN">
+				</INTEGRATION_COMPONENT_USER_PROP>
+			</INTEGRATION_COMPONENT>
+			<INTEGRATION_OBJECT_USER_PROP
+			   INACTIVE="N"
+			   NAME="EnforceCardinality"
+			   VALUE="y"
+			   UPDATED="05/14/2019 04:56:45"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/14/2019 04:56:45"
+			   CREATED_BY="SADMIN">
+			</INTEGRATION_OBJECT_USER_PROP>
+			<INTEGRATION_OBJECT_USER_PROP
+			   INACTIVE="N"
+			   NAME="XMLTagNamespace"
+			   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+			   UPDATED="05/14/2019 04:56:45"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/14/2019 04:56:45"
+			   CREATED_BY="SADMIN">
+			</INTEGRATION_OBJECT_USER_PROP>
+			<INTEGRATION_OBJECT_USER_PROP
+			   INACTIVE="N"
+			   NAME="XSDTypeNamespace"
+			   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+			   UPDATED="05/14/2019 04:56:46"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/14/2019 04:56:46"
+			   CREATED_BY="SADMIN">
+			</INTEGRATION_OBJECT_USER_PROP>
+		</INTEGRATION_OBJECT>
+	</PROJECT>
+</REPOSITORY>
+
+
+
