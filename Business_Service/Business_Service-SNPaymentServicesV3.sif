@@ -1,0 +1,2152 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<REPOSITORY
+   COMMENTS="Siebel Repository_June_release_2019"
+   NAME="Siebel Repository"
+   UPDATED="06/13/2019 03:14:20"
+   UPDATED_BY="SADMIN"
+   CREATED="06/13/2019 00:00:02"
+   CREATED_BY="SADMIN"
+   FIO_PLACEHOLDER_FIO="TRUE">
+	<PROJECT
+	   ALLOW_OBJECT_LOCKING="Y"
+	   COMMENTS="[VAMSI: 16-Sept-2018 : Created for P2PE Payments]"
+	   INACTIVE="N"
+	   LANGUAGE_LOCKED="ENU"
+	   LOCKED="Y"
+	   LOCKED_DATE="11/20/2019 23:35:14"
+	   NAME="SC P2PE Payments"
+	   UI_FREEZE="N"
+	   LOCKED_BY_NAME="KTODETI"
+	   UPDATED="11/21/2019 00:36:24"
+	   UPDATED_BY="KTODETI"
+	   CREATED="11/08/2018 23:44:51"
+	   CREATED_BY="SADMIN"
+	   FIO_PLACEHOLDER_FIO="TRUE">
+		<BUSINESS_SERVICE
+		   CACHE="N"
+		   CLASS="CSSWSOutboundDispatcher"
+		   EXTERNAL_USE="N"
+		   HIDDEN="N"
+		   INACTIVE="N"
+		   NAME="SNPaymentServicesV3"
+		   OBJECT_LOCKED="N"
+		   SERVER_ENABLED="N"
+		   STATE_MANAGEMENT_TYPE="Stateful"
+		   WEB_SERVICE_ENABLED="N"
+		   UPDATED="11/21/2019 00:47:41"
+		   UPDATED_BY="KTODETI"
+		   CREATED="11/21/2019 00:31:21"
+		   CREATED_BY="KTODETI">
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="activateGiftCard"
+			   UPDATED="11/21/2019 00:31:27"
+			   UPDATED_BY="KTODETI"
+			   CREATED="11/21/2019 00:31:26"
+			   CREATED_BY="KTODETI">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CustomHeaderContext"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input / Output"
+				   UPDATED="11/21/2019 00:31:27"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:27"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="GiftCardActivateRequest_2"
+				   NAME="GiftCardActivateRequest:parameters"
+				   OPTIONAL="Y"
+				   PREFERRED_SEQUENCE="0"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="GiftCardActivateRequest"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="GiftCardActivateResponse_2"
+				   NAME="GiftCardActivateResponse:parameters"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="GiftCardActivateResponse"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_XMLHIERARCHYOUTPUT-1004225336-15T"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="XMLHierarchyOutput"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:27"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:27"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultactor"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:27"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultcode"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultstring"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="authChecks"
+			   UPDATED="11/21/2019 00:31:26"
+			   UPDATED_BY="KTODETI"
+			   CREATED="11/21/2019 00:31:25"
+			   CREATED_BY="KTODETI">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="CheckRequest_2"
+				   NAME="CheckRequest:parameters"
+				   OPTIONAL="Y"
+				   PREFERRED_SEQUENCE="0"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="CheckRequest"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="CheckResponse_2"
+				   NAME="CheckResponse:parameters"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="CheckResponse"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CustomHeaderContext"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input / Output"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_XMLHIERARCHYOUTPUT-1004225336-15T"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="XMLHierarchyOutput"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultactor"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultcode"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultstring"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="authPayments"
+			   UPDATED="11/21/2019 00:31:22"
+			   UPDATED_BY="KTODETI"
+			   CREATED="11/21/2019 00:31:21"
+			   CREATED_BY="KTODETI">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="AuthRequest_2"
+				   NAME="AuthRequest:parameters"
+				   OPTIONAL="Y"
+				   PREFERRED_SEQUENCE="0"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED="11/21/2019 00:31:22"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:22"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:22"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:22"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="AuthRequest"
+					   UPDATED="11/21/2019 00:31:22"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:22"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:22"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:22"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="AuthResponse_2"
+				   NAME="AuthResponse:parameters"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:22"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:22"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:22"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:22"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="AuthResponse"
+					   UPDATED="11/21/2019 00:31:22"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:22"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:22"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:22"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CustomHeaderContext"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input / Output"
+				   UPDATED="11/21/2019 00:31:22"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:22"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_XMLHIERARCHYOUTPUT-1004225336-15T"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="XMLHierarchyOutput"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:22"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:22"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultactor"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:22"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:22"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultcode"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:22"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:22"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultstring"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:22"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:22"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="clearDisplay"
+			   UPDATED="11/21/2019 00:31:23"
+			   UPDATED_BY="KTODETI"
+			   CREATED="11/21/2019 00:31:22"
+			   CREATED_BY="KTODETI">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="ClearDisplayRequest_1"
+				   NAME="ClearDisplayRequest:parameters"
+				   OPTIONAL="Y"
+				   PREFERRED_SEQUENCE="0"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:22"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="ClearDisplayRequest"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="ClearDisplayResponse_1"
+				   NAME="ClearDisplayResponse:parameters"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="ClearDisplayResponse"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CustomHeaderContext"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input / Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_XMLHIERARCHYOUTPUT-1004225336-15T"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="XMLHierarchyOutput"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultactor"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultcode"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultstring"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="displayMultipleLines"
+			   UPDATED="11/21/2019 00:31:23"
+			   UPDATED_BY="KTODETI"
+			   CREATED="11/21/2019 00:31:23"
+			   CREATED_BY="KTODETI">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CustomHeaderContext"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input / Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="DisplayMultipleLinesRequest_1"
+				   NAME="DisplayMultipleLinesRequest:parameters"
+				   OPTIONAL="Y"
+				   PREFERRED_SEQUENCE="0"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="DisplayMultipleLinesRequest"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="DisplayMultipleLinesResponse_1"
+				   NAME="DisplayMultipleLinesResponse:parameters"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="DisplayMultipleLinesResponse"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_XMLHIERARCHYOUTPUT-1004225336-15T"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="XMLHierarchyOutput"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultactor"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultcode"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultstring"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="displaySingleLine"
+			   UPDATED="11/21/2019 00:31:26"
+			   UPDATED_BY="KTODETI"
+			   CREATED="11/21/2019 00:31:26"
+			   CREATED_BY="KTODETI">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CustomHeaderContext"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input / Output"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="DisplaySingleLineRequest_1"
+				   NAME="DisplaySingleLineRequest:parameters"
+				   OPTIONAL="Y"
+				   PREFERRED_SEQUENCE="0"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="DisplaySingleLineRequest"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="DisplaySingleLineResponse_1"
+				   NAME="DisplaySingleLineResponse:parameters"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="DisplaySingleLineResponse"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:26"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:26"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_XMLHIERARCHYOUTPUT-1004225336-15T"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="XMLHierarchyOutput"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultactor"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultcode"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultstring"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:26"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:26"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="promptConfirmation"
+			   UPDATED="11/21/2019 00:31:24"
+			   UPDATED_BY="KTODETI"
+			   CREATED="11/21/2019 00:31:24"
+			   CREATED_BY="KTODETI">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CustomHeaderContext"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input / Output"
+				   UPDATED="11/21/2019 00:31:24"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:24"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="PromptConfirmationRequest_1"
+				   NAME="PromptConfirmationRequest:parameters"
+				   OPTIONAL="Y"
+				   PREFERRED_SEQUENCE="0"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED="11/21/2019 00:31:24"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:24"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:24"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:24"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="PromptConfirmationRequest"
+					   UPDATED="11/21/2019 00:31:24"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:24"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:24"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:24"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="PromptConfirmationResponse_1"
+				   NAME="PromptConfirmationResponse:parameters"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:24"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:24"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:24"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:24"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="PromptConfirmationResponse"
+					   UPDATED="11/21/2019 00:31:24"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:24"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:24"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:24"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_XMLHIERARCHYOUTPUT-1004225336-15T"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="XMLHierarchyOutput"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:24"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:24"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultactor"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:24"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:24"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultcode"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:24"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:24"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultstring"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:24"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:24"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="promptTermsandConditions"
+			   UPDATED="11/21/2019 00:31:25"
+			   UPDATED_BY="KTODETI"
+			   CREATED="11/21/2019 00:31:25"
+			   CREATED_BY="KTODETI">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CustomHeaderContext"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input / Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="PromptTermsandConditionsRequest"
+				   NAME="PromptTermsandConditionsRequest:parameters"
+				   OPTIONAL="Y"
+				   PREFERRED_SEQUENCE="0"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:25"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:25"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="PromptTermsandConditionsRequest"
+					   UPDATED="11/21/2019 00:31:25"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:25"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:25"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:25"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="PromptTermsandConditionsResponse"
+				   NAME="PromptTermsandConditionsResponse:parameters"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:25"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:25"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="PromptTermsandConditionsResponse"
+					   UPDATED="11/21/2019 00:31:25"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:25"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:25"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:25"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_XMLHIERARCHYOUTPUT-1004225336-15T"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="XMLHierarchyOutput"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultactor"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultcode"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultstring"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="queryGiftCardBalance"
+			   UPDATED="11/21/2019 00:31:24"
+			   UPDATED_BY="KTODETI"
+			   CREATED="11/21/2019 00:31:23"
+			   CREATED_BY="KTODETI">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CustomHeaderContext"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input / Output"
+				   UPDATED="11/21/2019 00:31:24"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:24"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="GiftCardBalanceRequest_1"
+				   NAME="GiftCardBalanceRequest:parameters"
+				   OPTIONAL="Y"
+				   PREFERRED_SEQUENCE="0"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED="11/21/2019 00:31:24"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:24"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:24"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:24"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="GiftCardBalanceRequest"
+					   UPDATED="11/21/2019 00:31:24"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:24"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:24"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:24"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="GiftCardBalanceResponse_1"
+				   NAME="GiftCardBalanceResponse:parameters"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:24"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:24"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:24"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:24"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="GiftCardBalanceResponse"
+					   UPDATED="11/21/2019 00:31:24"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:24"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:24"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:24"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_XMLHIERARCHYOUTPUT-1004225336-15T"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="XMLHierarchyOutput"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:24"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:24"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultactor"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:24"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:24"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultcode"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:24"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:24"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultstring"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:24"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:24"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="readPrivateLabelCard"
+			   UPDATED="11/21/2019 00:31:22"
+			   UPDATED_BY="KTODETI"
+			   CREATED="11/21/2019 00:31:22"
+			   CREATED_BY="KTODETI">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CustomHeaderContext"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input / Output"
+				   UPDATED="11/21/2019 00:31:22"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:22"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="ReadPrivateLabelCardRequest_1"
+				   NAME="ReadPrivateLabelCardRequest:parameters"
+				   OPTIONAL="Y"
+				   PREFERRED_SEQUENCE="0"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED="11/21/2019 00:31:22"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:22"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:22"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:22"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="ReadPrivateLabelCardRequest"
+					   UPDATED="11/21/2019 00:31:22"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:22"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:22"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:22"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="ReadPrivateLabelCardResponse_1"
+				   NAME="ReadPrivateLabelCardResponse:parameters"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:22"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:22"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:22"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:22"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="ReadPrivateLabelCardResponse"
+					   UPDATED="11/21/2019 00:31:22"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:22"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:22"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:22"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_XMLHIERARCHYOUTPUT-1004225336-15T"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="XMLHierarchyOutput"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:22"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:22"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultactor"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:22"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:22"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultcode"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:22"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:22"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultstring"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:22"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:22"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="resetDisplay"
+			   UPDATED="11/21/2019 00:31:25"
+			   UPDATED_BY="KTODETI"
+			   CREATED="11/21/2019 00:31:25"
+			   CREATED_BY="KTODETI">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CustomHeaderContext"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input / Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="ResetDisplayRequest_1"
+				   NAME="ResetDisplayRequest:parameters"
+				   OPTIONAL="Y"
+				   PREFERRED_SEQUENCE="0"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:25"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:25"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="ResetDisplayRequest"
+					   UPDATED="11/21/2019 00:31:25"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:25"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:25"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:25"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="ResetDisplayResponse_1"
+				   NAME="ResetDisplayResponse:parameters"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:25"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:25"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="ResetDisplayResponse"
+					   UPDATED="11/21/2019 00:31:25"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:25"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:25"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:25"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_XMLHIERARCHYOUTPUT-1004225336-15T"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="XMLHierarchyOutput"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultactor"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultcode"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultstring"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="settlePayments"
+			   UPDATED="11/21/2019 00:31:23"
+			   UPDATED_BY="KTODETI"
+			   CREATED="11/21/2019 00:31:23"
+			   CREATED_BY="KTODETI">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CustomHeaderContext"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input / Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="SettleRequest_2"
+				   NAME="SettleRequest:parameters"
+				   OPTIONAL="Y"
+				   PREFERRED_SEQUENCE="0"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="SettleRequest"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="SettleResponse_2"
+				   NAME="SettleResponse:parameters"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="SettleResponse"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:23"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:23"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_XMLHIERARCHYOUTPUT-1004225336-15T"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="XMLHierarchyOutput"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultactor"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultcode"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultstring"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:23"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:23"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="voidPayments"
+			   UPDATED="11/21/2019 00:31:25"
+			   UPDATED_BY="KTODETI"
+			   CREATED="11/21/2019 00:31:24"
+			   CREATED_BY="KTODETI">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CustomHeaderContext"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input / Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="VoidRequest_2"
+				   NAME="VoidRequest:parameters"
+				   OPTIONAL="Y"
+				   PREFERRED_SEQUENCE="0"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Input"
+				   UPDATED="11/21/2019 00:31:24"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:24"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:24"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:24"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="VoidRequest"
+					   UPDATED="11/21/2019 00:31:24"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:24"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:24"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:24"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Integration Object"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_PARAMETERS-1004225339-16Y"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   INTEGRATION_OBJECT="VoidResponse_2"
+				   NAME="VoidResponse:parameters"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:24"
+				   CREATED_BY="KTODETI">
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="WSDLPartName"
+					   VALUE="parameters"
+					   UPDATED="11/21/2019 00:31:25"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:25"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementName"
+					   VALUE="VoidResponse"
+					   UPDATED="11/21/2019 00:31:25"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:25"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+					<BUSINESS_SERVICE_METHOD_ARG_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLElementNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="11/21/2019 00:31:25"
+					   UPDATED_BY="KTODETI"
+					   CREATED="11/21/2019 00:31:25"
+					   CREATED_BY="KTODETI">
+					</BUSINESS_SERVICE_METHOD_ARG_USER_PROP>
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="Hierarchy"
+				   DISPLAY_NAME_-_STRING_REFERENCE="SBL_XMLHIERARCHYOUTPUT-1004225336-15T"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="XMLHierarchyOutput"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Hierarchy"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultactor"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultcode"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="faultstring"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/21/2019 00:31:25"
+				   UPDATED_BY="KTODETI"
+				   CREATED="11/21/2019 00:31:25"
+				   CREATED_BY="KTODETI">
+				</BUSINESS_SERVICE_METHOD_ARG>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_USER_PROP
+			   INACTIVE="N"
+			   NAME="siebel_port_name"
+			   VALUE="SNPaymentServicesV3SOAP"
+			   UPDATED="11/21/2019 00:31:27"
+			   UPDATED_BY="KTODETI"
+			   CREATED="11/21/2019 00:31:27"
+			   CREATED_BY="KTODETI">
+			</BUSINESS_SERVICE_USER_PROP>
+			<BUSINESS_SERVICE_USER_PROP
+			   INACTIVE="N"
+			   NAME="siebel_web_service_name"
+			   VALUE="SNPaymentServicesV3"
+			   UPDATED="11/21/2019 00:31:27"
+			   UPDATED_BY="KTODETI"
+			   CREATED="11/21/2019 00:31:27"
+			   CREATED_BY="KTODETI">
+			</BUSINESS_SERVICE_USER_PROP>
+			<BUSINESS_SERVICE_USER_PROP
+			   INACTIVE="N"
+			   NAME="siebel_web_service_namespace"
+			   VALUE="http://xmlns.sleepnumber.com/Services/PaymentService"
+			   UPDATED="11/21/2019 00:31:27"
+			   UPDATED_BY="KTODETI"
+			   CREATED="11/21/2019 00:31:27"
+			   CREATED_BY="KTODETI">
+			</BUSINESS_SERVICE_USER_PROP>
+		</BUSINESS_SERVICE>
+	</PROJECT>
+</REPOSITORY>
+
+
+
