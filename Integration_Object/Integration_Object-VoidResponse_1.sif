@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<REPOSITORY
+   COMMENTS="Siebel Repository_June_release_2019"
+   NAME="Siebel Repository"
+   UPDATED="06/13/2019 03:14:20"
+   UPDATED_BY="SADMIN"
+   CREATED="06/13/2019 00:00:02"
+   CREATED_BY="SADMIN"
+   FIO_PLACEHOLDER_FIO="TRUE">
+	<PROJECT
+	   ALLOW_OBJECT_LOCKING="Y"
+	   COMMENTS="[VAMSI: 16-Sept-2018 : Created for P2PE Payments]"
+	   INACTIVE="N"
+	   LANGUAGE_LOCKED="ENU"
+	   LOCKED="Y"
+	   LOCKED_DATE="11/20/2019 23:35:14"
+	   NAME="SC P2PE Payments"
+	   UI_FREEZE="N"
+	   LOCKED_BY_NAME="KTODETI"
+	   UPDATED="11/21/2019 00:36:24"
+	   UPDATED_BY="KTODETI"
+	   CREATED="11/08/2018 23:44:51"
+	   CREATED_BY="SADMIN"
+	   FIO_PLACEHOLDER_FIO="TRUE">
+		<INTEGRATION_OBJECT
+		   BASE_OBJECT_TYPE="XML"
+		   EXTERNAL_NAME="VoidResponse"
+		   INACTIVE="N"
+		   NAME="VoidResponse_1"
+		   OBJECT_LOCKED="N"
+		   UPDATED="11/21/2019 00:48:56"
+		   UPDATED_BY="KTODETI"
+		   CREATED="05/14/2019 04:59:33"
+		   CREATED_BY="SADMIN">
+			<INTEGRATION_COMPONENT
+			   ADAPTER_INFO="/VoidResponse/TransactionVoidResponse"
+			   CARDINALITY="One"
+			   EXTERNAL_NAME="TransactionVoidResponse"
+			   EXTERNAL_SEQUENCE="2"
+			   INACTIVE="N"
+			   NAME="TransactionVoidResponse"
+			   PARENT_INTEGRATION_COMPONENT="VoidResponse"
+			   SHARE="N"
+			   XML_SEQUENCE="2"
+			   XML_TAG="TransactionVoidResponse"
+			   UPDATED="05/14/2019 04:59:56"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/14/2019 04:59:33"
+			   CREATED_BY="SADMIN">
+				<INTEGRATION_COMPONENT_FIELD
+				   ADAPTER_INFO="/CardEntryMode"
+				   EXTERNAL_NAME="CardEntryMode"
+				   EXTERNAL_REQUIRED="N"
+				   EXTERNAL_SEQUENCE="8"
+				   FIELD_TYPE="Data"
+				   INACTIVE="N"
+				   NAME="CardEntryMode"
+				   PHYSICAL_DATA_TYPE="DTYPE_TEXT"
+				   REQUIRED="N"
+				   USER_VISIBLE="Y"
+				   XML_SEQUENCE="8"
+				   XML_STYLE="Element"
+				   XML_TAG="CardEntryMode"
+				   UPDATED="05/14/2019 04:59:36"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:59:34"
+				   CREATED_BY="SADMIN">
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLTagNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:59:34"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:34"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeName"
+					   VALUE="string"
+					   UPDATED="05/14/2019 04:59:34"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:34"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeNamespace"
+					   VALUE="http://www.w3.org/2001/XMLSchema"
+					   UPDATED="05/14/2019 04:59:36"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:36"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+				</INTEGRATION_COMPONENT_FIELD>
+				<INTEGRATION_COMPONENT_FIELD
+				   ADAPTER_INFO="/CardType"
+				   EXTERNAL_NAME="CardType"
+				   EXTERNAL_REQUIRED="N"
+				   EXTERNAL_SEQUENCE="9"
+				   FIELD_TYPE="Data"
+				   INACTIVE="N"
+				   NAME="CardType"
+				   PHYSICAL_DATA_TYPE="DTYPE_TEXT"
+				   REQUIRED="N"
+				   USER_VISIBLE="Y"
+				   XML_SEQUENCE="9"
+				   XML_STYLE="Element"
+				   XML_TAG="CardType"
+				   UPDATED="05/14/2019 04:59:38"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:59:36"
+				   CREATED_BY="SADMIN">
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLTagNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:59:37"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:37"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeName"
+					   VALUE="string"
+					   UPDATED="05/14/2019 04:59:38"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:38"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeNamespace"
+					   VALUE="http://www.w3.org/2001/XMLSchema"
+					   UPDATED="05/14/2019 04:59:38"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:38"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+				</INTEGRATION_COMPONENT_FIELD>
+				<INTEGRATION_COMPONENT_FIELD
+				   ADAPTER_INFO="/CustomerReceiptText"
+				   EXTERNAL_NAME="CustomerReceiptText"
+				   EXTERNAL_REQUIRED="N"
+				   EXTERNAL_SEQUENCE="12"
+				   FIELD_TYPE="Data"
+				   INACTIVE="N"
+				   NAME="CustomerReceiptText"
+				   PHYSICAL_DATA_TYPE="DTYPE_TEXT"
+				   REQUIRED="N"
+				   USER_VISIBLE="Y"
+				   XML_SEQUENCE="12"
+				   XML_STYLE="Element"
+				   XML_TAG="CustomerReceiptText"
+				   UPDATED="05/14/2019 04:59:40"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:59:39"
+				   CREATED_BY="SADMIN">
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLTagNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:59:39"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:39"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeName"
+					   VALUE="string"
+					   UPDATED="05/14/2019 04:59:40"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:40"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeNamespace"
+					   VALUE="http://www.w3.org/2001/XMLSchema"
+					   UPDATED="05/14/2019 04:59:40"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:40"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+				</INTEGRATION_COMPONENT_FIELD>
+				<INTEGRATION_COMPONENT_FIELD
+				   ADAPTER_INFO="/ErrorIndicator"
+				   EXTERNAL_NAME="ErrorIndicator"
+				   EXTERNAL_REQUIRED="N"
+				   EXTERNAL_SEQUENCE="3"
+				   FIELD_TYPE="Data"
+				   INACTIVE="N"
+				   NAME="ErrorIndicator"
+				   PHYSICAL_DATA_TYPE="DTYPE_TEXT"
+				   REQUIRED="N"
+				   USER_VISIBLE="Y"
+				   XML_SEQUENCE="3"
+				   XML_STYLE="Element"
+				   XML_TAG="ErrorIndicator"
+				   UPDATED="05/14/2019 04:59:43"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:59:41"
+				   CREATED_BY="SADMIN">
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLTagNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:59:42"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:42"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeName"
+					   VALUE="string"
+					   UPDATED="05/14/2019 04:59:43"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:43"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeNamespace"
+					   VALUE="http://www.w3.org/2001/XMLSchema"
+					   UPDATED="05/14/2019 04:59:43"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:43"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+				</INTEGRATION_COMPONENT_FIELD>
+				<INTEGRATION_COMPONENT_FIELD
+				   ADAPTER_INFO="/LongError"
+				   EXTERNAL_LENGTH="255"
+				   EXTERNAL_NAME="LongError"
+				   EXTERNAL_REQUIRED="N"
+				   EXTERNAL_SEQUENCE="7"
+				   FIELD_TYPE="Data"
+				   INACTIVE="N"
+				   LENGTH="255"
+				   NAME="LongError"
+				   PHYSICAL_DATA_TYPE="DTYPE_TEXT"
+				   REQUIRED="N"
+				   USER_VISIBLE="Y"
+				   XML_SEQUENCE="7"
+				   XML_STYLE="Element"
+				   XML_TAG="LongError"
+				   UPDATED="05/14/2019 04:59:44"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:59:43"
+				   CREATED_BY="SADMIN">
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLTagNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:59:44"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:44"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeName"
+					   VALUE="string255"
+					   UPDATED="05/14/2019 04:59:44"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:44"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:59:44"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:44"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+				</INTEGRATION_COMPONENT_FIELD>
+				<INTEGRATION_COMPONENT_FIELD
+				   ADAPTER_INFO="/MerchantReceiptText"
+				   EXTERNAL_NAME="MerchantReceiptText"
+				   EXTERNAL_REQUIRED="N"
+				   EXTERNAL_SEQUENCE="13"
+				   FIELD_TYPE="Data"
+				   INACTIVE="N"
+				   NAME="MerchantReceiptText"
+				   PHYSICAL_DATA_TYPE="DTYPE_TEXT"
+				   REQUIRED="N"
+				   USER_VISIBLE="Y"
+				   XML_SEQUENCE="13"
+				   XML_STYLE="Element"
+				   XML_TAG="MerchantReceiptText"
+				   UPDATED="05/14/2019 04:59:46"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:59:45"
+				   CREATED_BY="SADMIN">
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLTagNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:59:45"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:45"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeName"
+					   VALUE="string"
+					   UPDATED="05/14/2019 04:59:46"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:46"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeNamespace"
+					   VALUE="http://www.w3.org/2001/XMLSchema"
+					   UPDATED="05/14/2019 04:59:46"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:46"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+				</INTEGRATION_COMPONENT_FIELD>
+				<INTEGRATION_COMPONENT_FIELD
+				   ADAPTER_INFO="/PrimaryErrorCode"
+				   EXTERNAL_NAME="PrimaryErrorCode"
+				   EXTERNAL_REQUIRED="N"
+				   EXTERNAL_SEQUENCE="4"
+				   FIELD_TYPE="Data"
+				   INACTIVE="N"
+				   NAME="PrimaryErrorCode"
+				   PHYSICAL_DATA_TYPE="DTYPE_TEXT"
+				   REQUIRED="N"
+				   USER_VISIBLE="Y"
+				   XML_SEQUENCE="4"
+				   XML_STYLE="Element"
+				   XML_TAG="PrimaryErrorCode"
+				   UPDATED="05/14/2019 04:59:48"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:59:46"
+				   CREATED_BY="SADMIN">
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLTagNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:59:47"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:47"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeName"
+					   VALUE="string"
+					   UPDATED="05/14/2019 04:59:47"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:47"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeNamespace"
+					   VALUE="http://www.w3.org/2001/XMLSchema"
+					   UPDATED="05/14/2019 04:59:48"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:48"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+				</INTEGRATION_COMPONENT_FIELD>
+				<INTEGRATION_COMPONENT_FIELD
+				   ADAPTER_INFO="/ReceiptText"
+				   EXTERNAL_NAME="ReceiptText"
+				   EXTERNAL_REQUIRED="N"
+				   EXTERNAL_SEQUENCE="10"
+				   FIELD_TYPE="Data"
+				   INACTIVE="N"
+				   NAME="ReceiptText"
+				   PHYSICAL_DATA_TYPE="DTYPE_TEXT"
+				   REQUIRED="N"
+				   USER_VISIBLE="Y"
+				   XML_SEQUENCE="10"
+				   XML_STYLE="Element"
+				   XML_TAG="ReceiptText"
+				   UPDATED="05/14/2019 04:59:49"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:59:48"
+				   CREATED_BY="SADMIN">
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLTagNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:59:49"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:49"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeName"
+					   VALUE="string"
+					   UPDATED="05/14/2019 04:59:49"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:49"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeNamespace"
+					   VALUE="http://www.w3.org/2001/XMLSchema"
+					   UPDATED="05/14/2019 04:59:49"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:49"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+				</INTEGRATION_COMPONENT_FIELD>
+				<INTEGRATION_COMPONENT_FIELD
+				   ADAPTER_INFO="/ResponseCode"
+				   EXTERNAL_NAME="ResponseCode"
+				   EXTERNAL_REQUIRED="N"
+				   EXTERNAL_SEQUENCE="11"
+				   FIELD_TYPE="Data"
+				   INACTIVE="N"
+				   NAME="ResponseCode"
+				   PHYSICAL_DATA_TYPE="DTYPE_TEXT"
+				   REQUIRED="N"
+				   USER_VISIBLE="Y"
+				   XML_SEQUENCE="11"
+				   XML_STYLE="Element"
+				   XML_TAG="ResponseCode"
+				   UPDATED="05/14/2019 04:59:51"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:59:50"
+				   CREATED_BY="SADMIN">
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLTagNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:59:50"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:50"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeName"
+					   VALUE="string"
+					   UPDATED="05/14/2019 04:59:51"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:51"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeNamespace"
+					   VALUE="http://www.w3.org/2001/XMLSchema"
+					   UPDATED="05/14/2019 04:59:51"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:51"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+				</INTEGRATION_COMPONENT_FIELD>
+				<INTEGRATION_COMPONENT_FIELD
+				   ADAPTER_INFO="/SecondaryErrorCode"
+				   EXTERNAL_NAME="SecondaryErrorCode"
+				   EXTERNAL_REQUIRED="N"
+				   EXTERNAL_SEQUENCE="5"
+				   FIELD_TYPE="Data"
+				   INACTIVE="N"
+				   NAME="SecondaryErrorCode"
+				   PHYSICAL_DATA_TYPE="DTYPE_TEXT"
+				   REQUIRED="N"
+				   USER_VISIBLE="Y"
+				   XML_SEQUENCE="5"
+				   XML_STYLE="Element"
+				   XML_TAG="SecondaryErrorCode"
+				   UPDATED="05/14/2019 04:59:52"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:59:51"
+				   CREATED_BY="SADMIN">
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLTagNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:59:51"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:51"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeName"
+					   VALUE="int"
+					   UPDATED="05/14/2019 04:59:52"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:52"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeNamespace"
+					   VALUE="http://www.w3.org/2001/XMLSchema"
+					   UPDATED="05/14/2019 04:59:52"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:52"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+				</INTEGRATION_COMPONENT_FIELD>
+				<INTEGRATION_COMPONENT_FIELD
+				   ADAPTER_INFO="/ShortError"
+				   EXTERNAL_NAME="ShortError"
+				   EXTERNAL_REQUIRED="N"
+				   EXTERNAL_SEQUENCE="6"
+				   FIELD_TYPE="Data"
+				   INACTIVE="N"
+				   NAME="ShortError"
+				   PHYSICAL_DATA_TYPE="DTYPE_TEXT"
+				   REQUIRED="N"
+				   USER_VISIBLE="Y"
+				   XML_SEQUENCE="6"
+				   XML_STYLE="Element"
+				   XML_TAG="ShortError"
+				   UPDATED="05/14/2019 04:59:53"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:59:52"
+				   CREATED_BY="SADMIN">
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XMLTagNamespace"
+					   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+					   UPDATED="05/14/2019 04:59:52"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:52"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeName"
+					   VALUE="string"
+					   UPDATED="05/14/2019 04:59:53"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:53"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+					<INTEGRATION_COMPONENT_FIELD_USER_PROP
+					   INACTIVE="N"
+					   NAME="XSDTypeNamespace"
+					   VALUE="http://www.w3.org/2001/XMLSchema"
+					   UPDATED="05/14/2019 04:59:53"
+					   UPDATED_BY="SADMIN"
+					   CREATED="05/14/2019 04:59:53"
+					   CREATED_BY="SADMIN">
+					</INTEGRATION_COMPONENT_FIELD_USER_PROP>
+				</INTEGRATION_COMPONENT_FIELD>
+				<INTEGRATION_COMPONENT_USER_PROP
+				   INACTIVE="N"
+				   NAME="XMLTagNamespace"
+				   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+				   UPDATED="05/14/2019 04:59:54"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:59:54"
+				   CREATED_BY="SADMIN">
+				</INTEGRATION_COMPONENT_USER_PROP>
+				<INTEGRATION_COMPONENT_USER_PROP
+				   INACTIVE="N"
+				   NAME="XSDTypeName"
+				   VALUE="TransactionVoidResponseType"
+				   UPDATED="05/14/2019 04:59:55"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:59:55"
+				   CREATED_BY="SADMIN">
+				</INTEGRATION_COMPONENT_USER_PROP>
+				<INTEGRATION_COMPONENT_USER_PROP
+				   INACTIVE="N"
+				   NAME="XSDTypeNamespace"
+				   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+				   UPDATED="05/14/2019 04:59:56"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:59:56"
+				   CREATED_BY="SADMIN">
+				</INTEGRATION_COMPONENT_USER_PROP>
+			</INTEGRATION_COMPONENT>
+			<INTEGRATION_COMPONENT
+			   ADAPTER_INFO="/VoidResponse"
+			   CARDINALITY="One"
+			   EXTERNAL_NAME="VoidResponse"
+			   EXTERNAL_SEQUENCE="1"
+			   INACTIVE="N"
+			   NAME="VoidResponse"
+			   SHARE="N"
+			   XML_SEQUENCE="1"
+			   XML_TAG="VoidResponse"
+			   UPDATED="05/14/2019 04:59:57"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/14/2019 04:59:56"
+			   CREATED_BY="SADMIN">
+				<INTEGRATION_COMPONENT_USER_PROP
+				   INACTIVE="N"
+				   NAME="XMLTagNamespace"
+				   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+				   UPDATED="05/14/2019 04:59:56"
+				   UPDATED_BY="SADMIN"
+				   CREATED="05/14/2019 04:59:56"
+				   CREATED_BY="SADMIN">
+				</INTEGRATION_COMPONENT_USER_PROP>
+			</INTEGRATION_COMPONENT>
+			<INTEGRATION_OBJECT_USER_PROP
+			   INACTIVE="N"
+			   NAME="EnforceCardinality"
+			   VALUE="y"
+			   UPDATED="05/14/2019 04:59:57"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/14/2019 04:59:57"
+			   CREATED_BY="SADMIN">
+			</INTEGRATION_OBJECT_USER_PROP>
+			<INTEGRATION_OBJECT_USER_PROP
+			   INACTIVE="N"
+			   NAME="XMLTagNamespace"
+			   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+			   UPDATED="05/14/2019 04:59:58"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/14/2019 04:59:58"
+			   CREATED_BY="SADMIN">
+			</INTEGRATION_OBJECT_USER_PROP>
+			<INTEGRATION_OBJECT_USER_PROP
+			   INACTIVE="N"
+			   NAME="XSDTypeNamespace"
+			   VALUE="http://xmlns.sleepnumber.com/Services/Payment"
+			   UPDATED="05/14/2019 04:59:58"
+			   UPDATED_BY="SADMIN"
+			   CREATED="05/14/2019 04:59:58"
+			   CREATED_BY="SADMIN">
+			</INTEGRATION_OBJECT_USER_PROP>
+		</INTEGRATION_OBJECT>
+	</PROJECT>
+</REPOSITORY>
+
+
+
