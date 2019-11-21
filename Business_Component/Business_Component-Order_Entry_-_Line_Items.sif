@@ -13,7 +13,7 @@
 	   LOCKED="N"
 	   NAME="Order Entry"
 	   UI_FREEZE="N"
-	   UPDATED="11/19/2019 05:45:41"
+	   UPDATED="11/21/2019 04:13:03"
 	   UPDATED_BY="KTODETI"
 	   CREATED="08/17/1998 13:50:31"
 	   CREATED_BY="SADMIN"
@@ -45,7 +45,7 @@ will change to CSSBCCGOrderItem in the future Changed Search Spec for CR 12-L4ZH
 		   SCRIPTED="Y"
 		   TABLE="S_ORDER_ITEM"
 		   TYPE="Non-Transient"
-		   UPDATED="11/19/2019 05:46:44"
+		   UPDATED="11/21/2019 04:13:32"
 		   UPDATED_BY="KTODETI"
 		   CREATED="08/17/1998 14:48:02"
 		   CREATED_BY="SADMIN">
@@ -188,28 +188,32 @@ var DisAmount=&quot;&quot;,DisPer=&quot;&quot;,DisReason=&quot;&quot;;//SNARRA:1
 			   SCRIPT="function BusComp_InvokeMethod (MethodName)
 {
 	//VALLA:19-NOV-2019: Added below code to invoke shipping discounts while perfoming RePrice
-	if(MethodName == &quot;CalculatePriceAll&quot;){
-		var invPriceFlag = TheApplication().GetProfileAttr(&quot;InvCalPriceAll&quot;);
-		var oActiveBO = TheApplication().ActiveBusObject();
-		if(oActiveBO.Name() == &quot;Order Entry (Sales)&quot; &amp;&amp; invPriceFlag == &quot;Y&quot;){
-		 var oOrderBC = oActiveBO.GetBusComp(&quot;Order Entry - Orders&quot;);
-		 	with(oOrderBC){
-				var sOrderId = oOrderBC.GetFieldValue(&quot;Id&quot;);
-				var sFieight = oOrderBC.GetFieldValue(&quot;SC Freight Calculated Flag&quot;);
-				if(sFieight == &quot;Y&quot;){
-					oOrderBC.GetFieldValue(&quot;SC Freight Calculated Flag&quot;,&quot;Y&quot;);
-					oOrderBC.WriteRecord();
-					oOrderBC.InvokeMethod(&quot;RefreshBusComp&quot;);
-					this.InvokeMethod(&quot;RefreshBusComp&quot;)
-					this.InvokeMethod(&quot;SC Calculate Shipping&quot;);
+	try{
+		if(MethodName == &quot;CalculatePriceAll&quot;){
+			var invPriceFlag = TheApplication().GetProfileAttr(&quot;InvCalPriceAll&quot;);
+			var oActiveBO = TheApplication().ActiveBusObject();
+			if(oActiveBO != null &amp;&amp; oActiveBO.Name() == &quot;Order Entry (Sales)&quot; &amp;&amp; invPriceFlag == &quot;Y&quot;){
+			 var oOrderBC = oActiveBO.GetBusComp(&quot;Order Entry - Orders&quot;);
+			 	with(oOrderBC){
+					var sOrderId = GetFieldValue(&quot;Id&quot;);
+					var sFieight = GetFieldValue(&quot;SC Freight Calculated Flag&quot;);
+					if(sFieight == &quot;Y&quot;){
+						SetFieldValue(&quot;SC Freight Calculated Flag&quot;,&quot;N&quot;);
+						WriteRecord();
+						//oOrderBC.InvokeMethod(&quot;RefreshBusComp&quot;);
+						//this.InvokeMethod(&quot;RefreshBusComp&quot;)
+						this.InvokeMethod(&quot;SC Calculate Shipping&quot;);
+					}
 				}
 			}
+			TheApplication().SetProfileAttr(&quot;InvCalPriceAll&quot;,&quot;N&quot;);
 		}
-		TheApplication().SetProfileAttr(&quot;InvCalPriceAll&quot;,&quot;N&quot;);
+	}catch(e){
+		TheApplication().RaiseErrorText(e.toString());
 	}
 }"
 			   SEQUENCE="15"
-			   UPDATED="11/19/2019 05:45:41"
+			   UPDATED="11/21/2019 04:13:03"
 			   UPDATED_BY="KTODETI"
 			   CREATED="08/31/2018 05:27:24"
 			   CREATED_BY="SADMIN">
